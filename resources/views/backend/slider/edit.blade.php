@@ -1,0 +1,45 @@
+<div class="box box-default">
+    <div class="box-header with-border">
+        <h3 class="box-title">{{trans('app.edit')}} &nbsp;</h3>
+
+    </div>
+    <div class="box-body">
+
+        {!! Form::model($edits,['method'=>'PUT','enctype'=>'multipart/form-data','route'=>['slider.update',$edits->id]]) !!}
+
+
+        <div class="form-group {{ ($errors->has('title'))?'has-error':'' }}">
+            <label>Slider title
+                <label class="text-danger"> *</label>
+            </label>
+            {!! Form::text('title',null,['class'=>'form-control','placeholder' => 'Slide 1']) !!}
+            {!! $errors->first('title', '<span class="text-danger">:message</span>') !!}
+        </div>
+        <div class="form-group {{ ($errors->has('image'))?'has-error':'' }}">
+            <label for="image" class="control-label align">Slider Image </label>
+            {{Form::file('image',null,array('class'=>'form-control','id'=>'image','placeholder'=>
+            'Choose File'))}}
+            {!! $errors->first('image', '<span class="text-danger">:message</span>') !!}
+            @if($edits->image)
+            <img class="profile-user-img img-responsive img-circle" src="{{asset('storage/uploads/images/slider/'.$edits->image)}}" style="width:150px" alt="No Image">
+            @endif
+        </div>
+
+        <div class="form-group {{ ($errors->has('status'))?'has-error':'' }}">
+            <label for="status">{{trans('app.status')}} </label><br>
+            {{Form::radio('status', 'active',true,['class'=>'minimal-red'])}} {{trans('app.active')}} &nbsp;&nbsp;&nbsp;
+            {{Form::radio('status', 'inactive',null,['class'=>'minimal-red'])}} {{trans('app.inactive')}}
+        </div>
+        <!-- /.form group -->
+        <div class="box-footer">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button type="submit" class="btn btn-primary">{{trans('app.update')}}</button>
+            </div>
+            <!-- /.box-footer -->
+        </div>
+        {!! Form::close() !!}
+
+
+    </div>
+    <!-- /.box-body -->
+</div>
