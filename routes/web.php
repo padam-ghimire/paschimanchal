@@ -7,7 +7,7 @@ Route::get('/', 'Frontend\MainController@index')->name('home');
 Route::get('/about', 'Frontend\MainController@about')->name('about');
 Route::get('/contact', 'Frontend\MainController@contact')->name('contact');
 Route::get('/portfolio', 'Frontend\MainController@portfolio')->name('portfolio');
-Route::get('/services', 'Frontend\MainController@services')->name('services');
+Route::get('/service', 'Frontend\MainController@services')->name('services');
 Route::get('/news', 'Frontend\MainController@news')->name('news');
 Route::get('/case_study', 'Frontend\MainController@case_study')->name('case_study');
 
@@ -25,8 +25,12 @@ Route::group(['middleware' => ['auth']], function () {
     });
 
     Route::resource('/user', 'UserController');
+    Route::resource('/clients', 'Backend\ClientsController');
     Route::resource('/slider', 'Backend\SliderController');
+    Route::resource('/projects', 'Backend\ProjectsController');
     Route::resource('/board_members', 'Backend\BoardMemberController');
+    Route::resource('/whyWe', 'Backend\WhyWeController');
+    Route::resource('/services', 'Backend\ServicesController');
     Route::get('/about_us', 'Backend\AboutController@index')->name('about.index');
     Route::get('/about_us/{id}/edit', 'Backend\AboutController@edit')->name('about.edit');
     Route::post('/about_us/{id}/update', 'Backend\AboutController@update')->name('about.update');

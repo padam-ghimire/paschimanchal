@@ -33,6 +33,7 @@ class MenusTableSeeder extends Seeder
                 'menu_status' => '1',
                 'menu_order' => '3'
             ],
+          
             [
                 'parent_id' => '0',
                 'menu_name' => 'Configuration',
@@ -128,69 +129,10 @@ class MenusTableSeeder extends Seeder
                 'menu_status' => '1',
                 'menu_order' => '9'
             ],
-            [
-                'parent_id' => '3',
-                'menu_name' => 'Pradesh',
-                'menu_link' => '/configurations/pradesh',
-                'menu_controller' => 'PradeshController',
-                'menu_css' => '',
-                'menu_icon' => '<i class="fa fa-map-marker" aria-hidden="true"></i>',
-                'menu_status' => '1',
-                'menu_order' => '10'
-            ],
-            [
-                'parent_id' => '3',
-                'menu_name' => 'Municipality Type',
-                'menu_link' => '/configurations/muniType',
-                'menu_controller' => 'MuniTypeController',
-                'menu_css' => '',
-                'menu_icon' => '<i class="fa fa-map-signs" aria-hidden="true"></i>',
-                'menu_status' => '1',
-                'menu_order' => '11'
-            ],
-            [
-                'parent_id' => '3',
-                'menu_name' => 'District',
-                'menu_link' => '/configurations/district',
-                'menu_controller' => 'DistrictController',
-                'menu_css' => '',
-                'menu_icon' => '<i class="fa fa-map-pin" aria-hidden="true"></i>',
-                'menu_status' => '1',
-                'menu_order' => '13'
-            ],
-            [
-                'parent_id' => '3',
-                'menu_name' => 'Municipality',
-                'menu_link' => '/configurations/municipality',
-                'menu_controller' => 'MunicipalityController',
-                'menu_css' => '',
-                'menu_icon' => '<i class="fa fa-map" aria-hidden="true"></i>',
-                'menu_status' => '1',
-                'menu_order' => '13'
-
-            ],
-            [
-                'parent_id' => '3',
-                'menu_name' => 'Office Type',
-                'menu_link' => '/configurations/officeType',
-                'menu_controller' => 'OfficeTypeController',
-                'menu_css' => '',
-                'menu_icon' => '<i class="fa fa-building" aria-hidden="true"></i>',
-                'menu_status' => '1',
-                'menu_order' => '14'
-
-            ],
-            [
-                'parent_id' => '3',
-                'menu_name' => 'Office',
-                'menu_link' => '/configurations/office',
-                'menu_controller' => 'OfficeController',
-                'menu_css' => '',
-                'menu_icon' => '<i class="fa fa-map" aria-hidden="true"></i>',
-                'menu_status' => '1',
-                'menu_order' => '15'
-
-            ],
+          
+         
+         
+          
             [
                 'parent_id' => '4',
                 'menu_name' => 'Login Logs',
@@ -212,9 +154,18 @@ class MenusTableSeeder extends Seeder
                 'menu_status' => '1',
                 'menu_order' => '2'
             ],
-
             [
                 'parent_id' => '0',
+                'menu_name' => 'Frontend',
+                'menu_link' => '',
+                'menu_controller' => '',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-wrench" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '20'
+            ],
+            [
+                'parent_id' => '14',
                 'menu_name' => 'Slider',
                 'menu_link' => '/slider',
                 'menu_controller' => 'SliderController',
@@ -222,6 +173,70 @@ class MenusTableSeeder extends Seeder
                 'menu_icon' => '<i class="fa fa-gears" aria-hidden="true"></i>',
                 'menu_status' => '1',
                 'menu_order' => '11'
+            ],
+
+            [
+                'parent_id' => '14',
+                'menu_name' => 'About',
+                'menu_link' => '/about_us',
+                'menu_controller' => 'AboutController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-gears" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '14'
+            ],
+
+            [
+                'parent_id' => '14',
+                'menu_name' => 'Board Members',
+                'menu_link' => '/board_members',
+                'menu_controller' => 'BoardMemberController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-gears" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '14'
+            ],
+
+            [
+                'parent_id' => '14',
+                'menu_name' => 'Services',
+                'menu_link' => '/services',
+                'menu_controller' => 'ServicesController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-gears" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '15'
+            ],
+
+            [
+                'parent_id' => '14',
+                'menu_name' => 'Why we?',
+                'menu_link' => '/whyWe',
+                'menu_controller' => 'WhyWeController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-gears" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '15'
+            ],
+            [
+                'parent_id' => '14',
+                'menu_name' => 'Clients',
+                'menu_link' => '/clients',
+                'menu_controller' => 'ClientsController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-gears" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '16'
+            ],
+            [
+                'parent_id' => '14',
+                'menu_name' => 'Projects',
+                'menu_link' => '/projects',
+                'menu_controller' => 'ProjectsController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-gears" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '16'
             ],
 
         ];

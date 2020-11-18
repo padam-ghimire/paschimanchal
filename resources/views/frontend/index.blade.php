@@ -19,7 +19,7 @@
   <section class="our-blog p-0 m-0 bg-silver">
     <section class="jumbotron text-center my-4">
         <div class="container">
-          <a href="services.html"><h3 class="jumbotron-heading" style="color:#34495E;">How We Work</h3></a>
+          <a href="/service"><h3 class="jumbotron-heading" style="color:#34495E;">How We Work</h3></a>
           <p class="">Network hardware
             installation, optic fiber lease service, supply of spares and expansion equipment are the major
             services provided to the ISPs</p>
@@ -43,7 +43,7 @@
                         </div>
                         <div class="col-md-7">
                             <h5>Designing</h5>
-                            <p><small>Before we implement our plans we design the reqired workflow for the given project. </small></p>
+                            <p><small>Before we implement our plans we design the required workflow for the given project. </small></p>
                         </div>
                     </div>
                     <div class="process-line-l"></div>
@@ -152,65 +152,21 @@
 <!--pricing-->
     <div class="container">
       <div class="card-deck mb-3 text-center">
+      @foreach($whyWes as $whyWe)
         <div class="card mb-4 box-shadow">
           <div class="card-header">
-            <h5 class="">800 km ADDS Installation</h5>
+            <h5 class="">{{$whyWe->title}}</h5>
           </div>
           <div class="card-body">
-            <h5 class="card-title pricing-card-title">800+</h5>
+            <h5 class="card-title pricing-card-title">{{$whyWe->sub_title}}</h5>
             <ul class="list-unstyled mt-3 mb-4">
-                <p> We have already connected 800 KM
-                    ADDS cable in various parts of Nepal.
-                    Amazingly, that’s quite a number.</p>
+                <p>{{$whyWe->description}}</p>
            
             </ul>
             <a href="contact.html"><button type="button" class="btn btn-sm btn-block btn-outline-primary">Join With Us</button></a>
           </div>
         </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h5 class="my-0 font-weight-normal">20+ Projects Completer</h5>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title pricing-card-title">20+</h5>
-            <ul class="list-unstyled mt-3 mb-4">
-                <p>Our completed projects include
-                    wide range of clients and everyday
-                    expanding.</p>
-              
-            </ul>
-            <a href="contact.html"><button type="button" class="btn btn-sm btn-block btn-success">Contact Us Now</button></a>
-          </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-          <div class="card-header">
-            <h5 class="my-0 font-weight-normal">70+ Manpower</h5>
-          </div>
-          <div class="card-body">
-            <h5 class="card-title pricing-card-title">70+</h5>
-            <ul class="list-unstyled mt-3 mb-4">
-                <p>We have skilled and very diveresed
-                    manpower to undertake any given
-                    project and we are determined to do the best.</p>
-              
-            </ul>
-            <a href="contact.html"><button type="button" class="btn btn-sm btn-block btn-outline-warning">Be A Part Of Us</button></a>
-          </div>
-        </div>
-        <div class="card mb-4 box-shadow">
-            <div class="card-header">
-              <h5 class="my-0 font-weight-normal">24/7 Service</h5>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title pricing-card-title">24/7</h5>
-              <ul class="list-unstyled mt-3 mb-4">
-                  <p> We are here at your services 24/7 .We are always open at your service anytime any day of the week .</p>
-              
-              </ul>
-              <a href="contact.html"><button type="button" class="btn btn-sm btn-block btn-danger">We Welcome You</button></a>
-            </div>
-          </div>
-          
+        @endforeach
       </div>
     </div>
     <!--pricing ends-->
@@ -221,7 +177,7 @@
 
       <section class="jumbotron text-center">
         <div class="container">
-          <a href="services.html"><h3 class="jumbotron-heading " style="color:#34495E;">Our Services</h3></a>
+          <a href="/service"><h3 class="jumbotron-heading " style="color:#34495E;">Our Services</h3></a>
           <p class="">Our company has been able to establish a good working relationship with major ISPs (Internet
             Service Providers) and has been providing them various kinds of support. </p>
           <p>
@@ -233,88 +189,20 @@
     <div class="album py-5 bg-light">
     <div class="container coverlay">
         <div class="row">
-
+  @foreach($services as $service)
             <div class="col-md-4">
-                <div class="content shadow-lg "> <a href="services.html">
-                        <div class="content-overlay"></div> <img class="content-image img-fluid" src="{{asset('frontend')}}/img/adds.jpg" style="height: 225px; width: 100%; display: block;">
+                <div class="content shadow-lg "> <a href="/service">
+                        <div class="content-overlay"></div> <img class="content-image img-fluid" src="{{asset('/storage/uploads/images/services/'.$service->image)}}" style="height: 225px; width: 100%; display: block;">
                         <div class="content-details fadeIn-bottom">
-                            <p class="content-text">We have been
-                                providing ADSS Installation service
-                                to companies like Nepal Telecom
-                                and Ncell.</p>
+                            <p class="content-text">
+                            {{$service->description}}
+                            </p>
                         </div>
                     </a></div>
                     <hr class="featurette-divider">
-                <div class="overlay"><a href="services.html"><h6>ADDS Installation</h6></a></div>
+                <div class="overlay"><a href="/service"><h6>{{$service->title}}</h6></a></div>
             </div>
-
-            <div class="col-md-4">
-                <div class="content shadow-lg"> <a href="services.html">
-                        <div class="content-overlay"></div> <img class="content-image img-fluid" src="{{asset('frontend')}}/img/opticalfiber.jpg" style="height: 225px; width: 100%; display: block;">
-                        <div class="content-details fadeIn-bottom">
-                            <p class="content-text">We
-                                provide optical fiber installation
-                                service as well as lease service to
-                                various companies around the
-                                country</p>
-                        </div>
-                    </a></div>
-                    <hr class="featurette-divider">
-                <div class="overlay"><a href="services.html"><h6>Optical Fibers</h6></a></div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="content shadow-lg"> <a href="services.html">
-                        <div class="content-overlay"></div> <img class="content-image img-fluid" src="{{asset('frontend')}}/img/ftth.jpg" style="height: 225px; width: 100%; display: block;">
-                        <div class="content-details fadeIn-bottom">
-                            <p class="content-text">replacing existing
-                                copper infrastructure such as telephone
-                                wires and coaxial cable.</p>
-                        </div>
-                    </a></div>
-                    <hr class="featurette-divider">
-                <div class="overlay"><a href="services.html"><h6>FTTH Installation</h6></a></div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="content shadow-lg"> <a href="services.html">
-                        <div class="content-overlay"></div> <img class="content-image img-fluid" src="{{asset('frontend')}}/img/isp.jpg" style="height: 225px; width: 100%; display: block;">
-                        <div class="content-details fadeIn-bottom">
-                            <p class="content-text">Network hardware installation,
-                                optic fiber lease service, supply of spares
-                                and expansion equipment are the
-                                major services provided to the ISPs.</p>
-                        </div>
-                    </a></div>
-                    <hr class="featurette-divider">
-                <div class="overlay"><a href="services.html"><h6>ISP Support</h6></a></div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="content shadow-lg"> <a href="services.html">
-                        <div class="content-overlay"></div> <img class="content-image img-fluid" src="{{asset('frontend')}}/img/cabletv.jpg" style="height: 225px; width: 100%; display: block;">
-                        <div class="content-details fadeIn-bottom">
-                            <p class="content-text">Our company has been able to establish
-                                a good working relationship with major
-                                ISPs</p>
-                        </div>
-                    </a></div>
-                    <hr class="featurette-divider">
-                <div class="overlay"><a href="services.html"><h6>Cable TV Support</h6></a></div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="content shadow-lg"> <a href="services.html">
-                        <div class="content-overlay"></div> <img class="content-image img-fluid" src="{{asset('frontend')}}/img/others.jpg" style="height: 225px; width: 100%; display: block;">
-                        <div class="content-details fadeIn-bottom">
-                            <p class="content-text">We Provide Other Services Regarding Communication and Networking</p>
-                        </div>
-                    </a></div>
-                    <hr class="featurette-divider">
-                <div class="overlay"><a href="services.html"><h6>Other Services</h6></a></div>
-            </div>
-
-          
+            @endforeach
         </div>
     </div>
      <!--overlay-->
@@ -328,18 +216,12 @@
 <div class="container">
   <div class="owl-carousel owl-theme">
 
-    <div >
-    <img src="{{asset('frontend')}}/img/nepaltelecom.png" alt="" style="height:100px;width:150px;" class="img-fluid">
+@foreach($clients as $client)
+<div >
+    <img src="{{asset('/storage/uploads/images/clients/'.$client->image)}}" alt="{{$client->name}}" style="height:100px;width:150px;" class="img-fluid">
   </div>
-  <div >
-    <img src="{{asset('frontend')}}/img/ncell.png" alt="" style="height:100px;width:150px;" class="img-fluid">
-  </div>
-  <div >
-    <img src="{{asset('frontend')}}/img/utl.png" alt="" style="height:100px;width:150px;" class="img-fluid">
-  </div>
-  <div >
-    <img src="{{asset('frontend')}}/img/ccs.png" alt="" style="height:100px;width:150px;" class="img-fluid">
-  </div>
+@endforeach
+ 
 </div>
 </div>
 <br><br>

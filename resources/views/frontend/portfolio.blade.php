@@ -86,51 +86,22 @@ happy.
   <!--pricing-->
   <div class="container">
     <div class="card-deck mb-3 text-center">
+    @foreach($whyWes as $whyWe)
       <div class="card mb-4 box-shadow">
         <div class="card-header">
-          <h5 class="my-0 font-weight-normal">800 km ADDS Installation</h5>
+          <h5 class="my-0 font-weight-normal">{{$whyWe->title}}</h5>
         </div>
         <div class="card-body">
-          <h5 class="card-title pricing-card-title">800+</h5>
+          <h5 class="card-title pricing-card-title">{{$whyWe->sub_title}}</h5>
           <ul class="list-unstyled mt-3 mb-4">
-            <p> We have already connected 800 KM
-              ADDS cable in various parts of Nepal.
-              Amazingly, that’s quite a number.</p>
+            <p> {{$whyWe->description}}</p>
            
           </ul>
-          <a href="contact.html"><button type="button" class="btn btn-sm btn-block btn-outline-primary">Join With Us</button></a>
+          <a href="/contact"><button type="button" class="btn btn-sm btn-block btn-outline-primary">Join With Us</button></a>
         </div>
       </div>
-      <div class="card mb-4 box-shadow">
-        <div class="card-header">
-          <h5 class="my-0 font-weight-normal">20+ Projects Completer</h5>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title pricing-card-title">20+</h5>
-          <ul class="list-unstyled mt-3 mb-4">
-            <p>Our completed projects include
-              wide range of clients and everyday
-              expanding.</p>
-            
-          </ul>
-          <a href="contact.html"><button type="button" class="btn btn-sm btn-block btn-success">Contact Us Now</button></a>
-        </div>
-      </div>
-      <div class="card mb-4 box-shadow">
-        <div class="card-header">
-          <h5 class="my-0 font-weight-normal">70+ Manpower</h5>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title pricing-card-title">70+</h5>
-          <ul class="list-unstyled mt-3 mb-4">
-            <p>We have skilled and very diveresed
-              manpower to undertake any given
-              project and we are determined to do the best.</p>
-            
-          </ul>
-          <a href="contact.html"><button type="button" class="btn btn-sm btn-block btn-outline-danger">Be A Part Of Us</button></a>
-        </div>
-      </div>
+    @endforeach
+     
     </div>
   </div>
   <br><br>
@@ -229,193 +200,29 @@ happy.
 
 <div class="section-block-grey">
   <div class="container">
-
-      <div class="row mt-60">
+    @foreach($projects as $project)
+       
+        <div class="row mt-60">
           <div class="col-md-4 col-sm-12 col-12">
               <div class="serv-section-2">
                   <div class="serv-section-2-icon"></div>
                   <div class="serv-section-desc">
-                      <h6 style="color:darkcyan">Installing and commissioning of Ncell ADSS
-                        Project</h6>
+                      <h6 style="color:darkcyan">{{$project->name}}</h6>
                         <div class="section-heading-line-left"></div>
-                          <p> Client - Ncell Pvt. Ltd.</p>
-                          <p>Area - Bharatpur, Tandi, Sauraha
-                            and Hetauda</p>
-                          <p>Year - October 2015</p>
+                          <p> Client -{{$project->client->name}}</p>
+                          <p>Area - {{$project->area}}
+                            </p>
+                          <p>Year -{{$project->year}}</p>
               </div>
             </div>
       </div>
-      <div class="col-md-4 col-sm-12 col-12">
-        <div class="serv-section-2">
-            <div class="serv-section-2-icon"></div>
-            <div class="serv-section-desc">
-                <h6 style="color:darkcyan">Working as a service provider of major Cable
-                  TV Networks</h6>
-                  <div class="section-heading-line-left"></div>
-                  <p>Client - Various Clients</p>
-                    <p>Area - Gandaki Zone</p>
-                    <p>Year - </p>
-                   
-        </div>
-      </div>
-</div>
-<div class="col-md-4 col-sm-12 col-12">
-  <div class="serv-section-2">
-      <div class="serv-section-2-icon"></div>
-      <div class="serv-section-desc">
-          <h6 style="color:darkcyan">Splicing of OPGW at 132 KVA
-            NEA overhead</h6>
-            <div class="section-heading-line-left"></div>
-                  <p>Client - Various Clients</p>
-                 <p>Area - Hetauda to Lahan</p>
-                 <P>Year - </P>
-                 
-  </div>
-</div>
-</div>
-</div>
 
+      
+    @endforeach
 
 
 
 <div class="row mt-60">
-  <div class="col-md-4 col-sm-12 col-12">
-      <div class="serv-section-2">
-          <div class="serv-section-2-icon"></div>
-          <div class="serv-section-desc">
-              <h6 style="color:darkcyan">Installation and commissioning of Nepal
-                Telecom ADSS project</h6>
-                <div class="section-heading-line-left"></div>
-                  <p> Client - CCS Nepal Pvt. Ltd.</p>
-                  <p>Area - Pokhara, Hemja, Suikhet,
-                    Patichaur, Kushma,
-                    Baglung Exchange</p>
-                  <p>Year - August 2013</p>
-      </div>
-    </div>
-</div>
-<div class="col-md-4 col-sm-12 col-12">
-<div class="serv-section-2">
-    <div class="serv-section-2-icon"></div>
-    <div class="serv-section-desc">
-        <h6 style="color:darkcyan">Installation of ADSS Cable of Ncell</h6>
-          <div class="section-heading-line-left"></div>
-           <p>Client - Ncell Pvt. Ltd. </p>  
-          <p>Area - Chitwan/ Hetauda</p>
-          <p>Year - 2015</p>
-           
-</div>
-</div>
-</div>
-<div class="col-md-4 col-sm-12 col-12">
-<div class="serv-section-2">
-<div class="serv-section-2-icon"></div>
-<div class="serv-section-desc">
-  <h6 style="color:darkcyan">Supply, installation and commissioning of
-    CCTV for security for Nepal Tourism Board</h6>
-    <div class="section-heading-line-left"></div>
-          <p>Client - Various Clients</p>
-         <p>Area - Pokhara City</p>
-         <p>Year - February 2012</p>
-         
-</div>
-</div>
-</div>
-</div>
-
-
-
-<div class="row mt-60">
-  <div class="col-md-4 col-sm-12 col-12">
-      <div class="serv-section-2">
-          <div class="serv-section-2-icon"></div>
-          <div class="serv-section-desc">
-              <h6 style="color:darkcyan">Supply of Spares & Expansion Equipment for
-                Cable TV</h6>
-                <div class="section-heading-line-left"></div>
-                  <p> Client - Various Clients</p>
-                  <p>Area - Gandaki & Dhaulagiri Zone</p>
-                  <p>Year - </p>
-      </div>
-    </div>
-</div>
-<div class="col-md-4 col-sm-12 col-12">
-<div class="serv-section-2">
-    <div class="serv-section-2-icon"></div>
-    <div class="serv-section-desc">
-        <h6 style="color:darkcyan">Supply of Spares and Expansion Equipment
-          for Cable TV Mid-Western Region Nepal
-          </h6>
-          <div class="section-heading-line-left"></div>
-           <p>Client - Various Clients </p>  
-          <p>Area - Lamahi, Dang</p>
-          <p>Year - </p>
-           
-</div>
-</div>
-</div>
-<div class="col-md-4 col-sm-12 col-12">
-<div class="serv-section-2">
-<div class="serv-section-2-icon"></div>
-<div class="serv-section-desc">
-  <h6 style="color:darkcyan">Supply, Installation & commissioning of
-    Cable TV hardware and Network</h6>
-    <div class="section-heading-line-left"></div>
-          <p>Client - Various Clients</p>
-         <p>Area - Gandaki & Dhaulagiri Zone </p>
-         <p>Year -January 2010</p>
-         
-</div>
-</div>
-</div>
-</div>
-
-
-<div class="row mt-60">
-  <div class="col-md-4 col-sm-12 col-12">
-      <div class="serv-section-2">
-          <div class="serv-section-2-icon"></div>
-          <div class="serv-section-desc">
-              <h6 style="color:darkcyan">Supply, installation and lease UTL
-                Communication March 2010</h6>
-                <div class="section-heading-line-left"></div>
-                  <p> Client -UTL (Running)</p>
-                  <p>Area - Pokhara to Baglung</p>
-                  <p>Year - March 2010</p>
-      </div>
-    </div>
-</div>
-<div class="col-md-4 col-sm-12 col-12">
-<div class="serv-section-2">
-    <div class="serv-section-2-icon"></div>
-    <div class="serv-section-desc">
-        <h6 style="color:darkcyan">Supply, installation and lease Ncell Pvt. Ltd
-          </h6>
-          <div class="section-heading-line-left"></div>
-           <p>Client - Ncell Pvt. Ltd. </p>  
-          <p>Area - Pokhara to Syangja,
-            Pokhara to Beni, Beni to
-            Jomsom & Pokhara valley</p>
-          <p>Year -Running </p>
-           
-</div>
-</div>
-</div>
-<div class="col-md-4 col-sm-12 col-12">
-<div class="serv-section-2">
-<div class="serv-section-2-icon"></div>
-<div class="serv-section-desc">
-  <h6 style="color:darkcyan">Installation of ADSS Cable of NTC in 22
-    routes</h6>
-    <div class="section-heading-line-left"></div>
-          <p>Client - CCS Nepal Pvt. Ltd.</p>
-         <p>Area - All Nepal </p>
-         <p>Year -Running</p>
-         
-</div>
-</div>
-</div>
-</div>
 
 
 

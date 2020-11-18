@@ -18,16 +18,18 @@ class BoardMemberController extends BaseController
      //
 
      private $boardMemberRepository;
+     private $designations;
 
      /**
       * Display a listing of the resource.
       *
       * @return \Illuminate\Http\Response
       */
-     public function __construct(BoardMemberRepository $boardMemberRepository)
+     public function __construct(BoardMemberRepository $boardMemberRepository, Designation $designation)
      {
          parent::__construct();
          $this->boardMemberRepository = $boardMemberRepository;
+         $this->designations = $designation;
      }
  
      public function index()
@@ -116,12 +118,13 @@ class BoardMemberController extends BaseController
      public function edit($id)
      {
          try{
+            $designations = $this->designations->all();
              $id = (int)$id;
              $edits = $this->boardMemberRepository->findById($id);
              if ($edits->count() > 0)
              {
                  $boardMembers = BoardMember::get();
-                 return view('backend.board_members.index', compact('edits','boardMembers'));
+                 return view('backend.board_members.index', compact('edits','boardMembers','designations'));
              }
              else{
                  session()->flash('error','Id could not be obtained!');
@@ -143,6 +146,8 @@ class BoardMemberController extends BaseController
       */
      public function update(Request $request, $id)
      {
+
+        // return $request;
          $id = (int)$id;
          try {
              $value= $request->all();
@@ -150,7 +155,7 @@ class BoardMemberController extends BaseController
              $boardMember = $this->boardMemberRepository->findById($id);
              $oldValue = $this->boardMemberRepository->findById($id);
  
-             if ($slider) {
+             if ($boardMember) {
                  if (!empty($request->file('image'))) {
                      $memberImage = $request->file('image');
                      $imageExtension = $memberImage->getClientOriginalExtension();
@@ -158,8 +163,7 @@ class BoardMemberController extends BaseController
                      $value['image'] = $memberImageName;
                      $memberImageSuccess = true;
                  }
-                 // $slider = new Slider();
-                 $update = $slider->fill($value)->save();
+                 $update = $boardMember->fill($value)->save();
                  if ($update) {
                      if (isset($memberImageSuccess)) {
                          if ($oldValue->image != null)
@@ -169,7 +173,7 @@ class BoardMemberController extends BaseController
                      }
  
                      session()->flash('success', 'Board member Successfully updated!');
-                     return redirect(route('slider.index'));
+                     return redirect(route('board_members.index'));
                  } else {
                      session()->flash('error', 'Team Member could not be update!');
                      return back();
@@ -193,9 +197,9 @@ class BoardMemberController extends BaseController
      {
          $id=(int)$id;
          try{
-             $value = $this->sliderRepository->findById($id);
+             $value = $this->boardMemberRepository->findById($id);
              $value->delete();
-             session()->flash('success','Slider successfully deleted!');
+             session()->flash('success','Board member successfully deleted!');
              return back();
  
          }catch (\Exception $e){
