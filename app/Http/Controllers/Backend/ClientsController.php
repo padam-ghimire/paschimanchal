@@ -6,6 +6,7 @@ use App\Models\Client;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repository\ClientRepository;
+use App\Http\Requests\ClientsRequest;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\BaseController;
@@ -57,7 +58,7 @@ class ClientsController extends BaseController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ClientsRequest $request)
     {
         
          // return $request->file('image');
@@ -78,7 +79,7 @@ class ClientsController extends BaseController
              if ($client) {
                  if (isset($clientImageSuccess)) {
                      Storage::putFileAs('public/uploads/images/clients', $clientImage, $imageName);
-                     Image::make(storage_path() . '/app/public/uploads/images/clients/' . $imageName)->resize(700, 540)->save();
+                     Image::make(storage_path() . '/app/public/uploads/images/clients/' . $imageName)->save();
                      session()->flash('success', 'Client Successfully Created!');
                      return back();
                  }
@@ -144,7 +145,7 @@ class ClientsController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ClientsRequest $request, $id)
     {
          // return $request;
          $id = (int)$id;
@@ -168,7 +169,7 @@ class ClientsController extends BaseController
                          if ($oldValue->image != null)
                              @unlink(storage_path() . 'public/uploads/images/clients' . $oldValue->image);
                              Storage::putFileAs('public/uploads/images/clients', $clientImage, $imageName);
-                             Image::make(storage_path() . '/app/public/uploads/images/clients/' . $imageName)->resize(700, 540)->save();
+                             Image::make(storage_path() . '/app/public/uploads/images/clients/' . $imageName)->save();
                      }
  
                      session()->flash('success', 'Client Successfully updated!');

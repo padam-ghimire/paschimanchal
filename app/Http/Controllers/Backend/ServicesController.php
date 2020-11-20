@@ -73,7 +73,7 @@ class ServicesController extends BaseController
              if ($service) {
                  if (isset($serviceImageSuccess)) {
                      Storage::putFileAs('public/uploads/images/services', $serviceImage, $imageName);
-                     Image::make(storage_path() . '/app/public/uploads/images/services/' . $imageName)->resize(700, 540)->save();
+                     Image::make(storage_path() . '/app/public/uploads/images/services/' . $imageName)->save();
                      session()->flash('success', 'Service Successfully Created!');
                      return back();
                  }
@@ -139,7 +139,7 @@ class ServicesController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ServiceRequest $request, $id)
     {
          // return $request;
          $id = (int)$id;

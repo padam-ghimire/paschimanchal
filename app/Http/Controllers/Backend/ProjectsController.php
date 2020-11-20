@@ -6,6 +6,7 @@ use App\Models\Client;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProjectRequest;
 use App\Repository\ProjectsRepository;
 use App\Http\Controllers\BaseController;
 
@@ -59,7 +60,7 @@ class ProjectsController extends BaseController
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProjectRequest $request)
     {
         // return $request->file('image');
         try {
@@ -131,7 +132,7 @@ class ProjectsController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProjectRequest $request, $id)
     {
         $id = (int)$id;
          try {

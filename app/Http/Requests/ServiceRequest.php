@@ -24,7 +24,14 @@ class ServiceRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title'=>'required',
+            'description'=>'required',
+            'design'=>'required',
+            'deployment'=>'required',
+            'image'=>'required',
+            'testing'=>'required',
+            'support'=>'required',
+
         ];
     }
 }

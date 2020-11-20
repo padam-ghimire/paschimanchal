@@ -23,8 +23,14 @@ class BoardMemberRequest extends FormRequest
      */
     public function rules()
     {
+        // protected $fillable=['name','designation_id','phone','facebook','image'];
+
         return [
-            //
+            'name'=>'required',
+            'designation_id'=>'required',
+            'phone'=>'required',
+            'facebook'=>'required',
+            'image'=>'required'
         ];
     }
 }

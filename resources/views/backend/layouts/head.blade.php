@@ -31,4 +31,5 @@
     <link rel="stylesheet" href="{{url('plugins/select2/dist/css/select2.min.css')}}">
     <link rel="stylesheet" href="{{url('dist/css/skins/skin-red.min.css')}}">
     <link rel="stylesheet" href="{{url('css/style.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
 </head>

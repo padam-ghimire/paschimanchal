@@ -17,8 +17,11 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('client_id');
-            $table->string('area');
-            $table->string('year');
+            $table->string('area')->nullable();
+            $table->string('contract_name')->nullable();
+            $table->string('description')->nullable();
+            $table->string('year')->nullable();
+            $table->string('quantity')->nullable();
             $table->timestamps();
         });
     }

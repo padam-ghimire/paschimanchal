@@ -13,7 +13,7 @@ class ProjectRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,13 @@ class ProjectRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name'=>'required',
+            'client_id'=>'required',
+            'area'=>'required',
+            'description'=>'required',
+            'year'=>'required',
+          
+
         ];
     }
 }

@@ -238,7 +238,43 @@ class MenusTableSeeder extends Seeder
                 'menu_status' => '1',
                 'menu_order' => '16'
             ],
+            [
+                'parent_id' => '14',
+                'menu_name' => 'News and Events',
+                'menu_link' => '/news',
+                'menu_controller' => 'NewsController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-gears" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '16'
+            ],
 
+            [
+                'parent_id' => '0',
+                'menu_name' => 'Settings',
+                'menu_link' => '/settings',
+                'menu_controller' => 'SettingsController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-gears" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '16'
+            ],
+            [
+                'parent_id' => '0',
+                'menu_name' => 'Queries',
+                'menu_link' => '/queries',
+                'menu_controller' => 'ContactController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-gears" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '16'
+            ],
+
+
+
+           
+
+           
         ];
         DB::table('menus')->insert($rows);
     }

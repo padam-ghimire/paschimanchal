@@ -12,70 +12,88 @@
     <link rel="stylesheet" href="{{asset('frontend')}}/owlcarousel/docs/assets/owlcarousel/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="{{asset('frontend')}}/owlcarousel/docs/assets/owlcarousel/assets/owl.theme.default.min.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend')}}/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{asset('frontend')}}/style/style.css">
+    
 </head>
 <body>
-  <!--Header-->
-  <div class="header">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-2"><img src="{{asset('frontend')}}/img/logo.png" alt="" class="img-fluid"></div>
-        <div class="col-lg-6"></div>
-        <div class="col-lg-4">
-          <br>
-          <a href=""><p><i class="fas fa-phone-volume" style="color:darkorange;"></i><span>&NonBreakingSpace; +977-061-525629, 537220 </span></p></a>
-           <a href=""><p><i class="fas fa-map-marker-alt" style="color:darkorange;"></i><span>&NonBreakingSpace;Gairaptan, Pokhara,Kaski, Nepal</p></a>
-            <p><a href="https://www.facebook.com/Paschimanchal-Solution-Pvt-Ltd-111318457329490" target="blank"><i class="fab fa-facebook" style="font-size:20px;color:#7dbbfa;"></i></a>
-            <span><a href="https://www.instagram.com/?hl=en" target="blank"><i class="fab fa-instagram" style="font-size:20px;color:maroon;"></i></a></span>
-            <span><a href="https://twitter.com/?lang=en" target="blank"><i class="fab fa-twitter-square" style="font-size:20px;color:blue;"></i></a></span>
-            <span><a href="https://www.linkedin.com/" target="blank"><i class="fab fa-linkedin" style="font-size:20px;color:darkblue;"></i></a></span>
-            </p>
-        </div>
-      </div>
-    </div>
-    
-  </div>
-  <hr style="width:80%;">
-
-  <!--Header Ends-->
 
     <!--naivigation-->
     <nav id="navbar_top" class="navbar navbar-expand-lg navbar-custom">
-        <a class="navbar-brand" href="index.html">PASCHIMANCHAL PVT.LTD</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa fa-home" aria-hidden="true"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ">
+
+        <a class="navbar-brand" href="/"><img src="{{asset('/storage/frontend/img/'.$settings[0]->logo)}}" alt="" height="50px"></a>
+
+        <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
+
+            <div class="header mr-auto">
+              <p class="d-md-none d-none d-lg-block ">
+                <br>
+                <span class="spanhead"></span> <i class="fas fa-phone-volume" style="color:darkcyan;"></i><span>&nbsp;&nbsp;<span style="color:#cc521d;">{{$settings[0]->phone}} &nbsp;&nbsp;&nbsp;&nbsp; </span >
+                <span><i class="fas fa-map-marker-alt" style="color:darkcyan;"></i><span>&nbsp;&nbsp;<span style="color:#cc521d;">{{$settings[0]->address}}</span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+                <span><a href="{{$settings[0]->facebook}}" target="blank"><i class="fab fa-facebook" style="font-size:25px;color:#7dbbfa;"></i></a>&nbsp;</span>
+                <span><a href="https://www.instagram.com/?hl=en" target="blank"><i class="fab fa-instagram" style="font-size:25px;color:maroon;"></i></a>&nbsp;</span>
+                <span><a href="{{$settings[0]->twitter}}" target="blank"><i class="fab fa-twitter-square" style="font-size:25px;color:blue;"></i></a>&nbsp;</span>
+                <span><a href="{{$settings[0]->linkedin}}" target="blank"><i class="fab fa-linkedin" style="font-size:25px;color:darkblue;"></i></a></span>
+                <hr style="width:150%;">
+              </p>
+            </div>
+       
+          <ul class="navbar-nav mr-auto ">
             <li class="nav-item ">
-              <div style="width:150px;"></div>
+              <div style="width:100px;"></div>
               </li>
             <li class="nav-item active">
-              <a class="nav-link" href="{{route('home')}}">HOME</a>
+              <a class="nav-link" href="{{route('home')}}">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('about')}}">ABOUT US</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('portfolio')}}">PORTFOLIO</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('services')}}">SERVICES</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{route('news')}}">NEWS & EVENTS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{route('case_study')}}">CASE STUDY</a>
+            <li class="nav-item ">
+              <div style="width:20px;"></div>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('contact')}}">CONTACT US</a>
+              <a class="nav-link" href="{{route('about')}}">About Us</a>
             </li>
+            <li class="nav-item ">
+              <div style="width:20px;"></div>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('portfolio')}}">Portfolio</a>
+            </li>
+            <li class="nav-item ">
+              <div style="width:20px;"></div>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('services')}}">Services</a>
+            </li>
+            <li class="nav-item ">
+              <div style="width:20px;"></div>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('news')}}">News & Events</a>
+            </li>
+            <li class="nav-item ">
+              <div style="width:20px;"></div>
+              </li>
+            <!-- <li class="nav-item">
+                <a class="nav-link" href="{{route('case_study')}}">Case Study</a>
+              </li> -->
+              <li class="nav-item ">
+                <div style="width:20px;"></div>
+                </li>
+                
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
+            </li>
+           
           </ul>
         </div>
+
+     
+        <br><br>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="fa fa-home" aria-hidden="true"></i>
+        </button>
       </nav>
   <!--Navigation ends-->
 
@@ -88,63 +106,127 @@
 @yield('content')
 
   
-
-  <!--footer-->
-<div class="footer">
-	<div class="container no-fluid">
-	<div class="row">
-    <div class="col-lg-3 logo "><img src="{{asset('frontend')}}/img/logo.png">
-      <div class="contactfooter">
-      <br><br>
-      <p><i class="fas fa-phone-volume"></i><span>&NonBreakingSpace; +977-061-525629, 537220 </span></p>
-      <a href=""><p><i class="fas fa-map-marker-alt"></i><span>&NonBreakingSpace;Gairaptan, Pokhara,Kaski, Nepal</p></a>
-        <p><a href="https://www.facebook.com/Paschimanchal-Solution-Pvt-Ltd-111318457329490" target="blank"><i class="fab fa-facebook" style="font-size:25px;"></i></a>
-          <span><a href="https://www.instagram.com/?hl=en" target="blank"><i class="fab fa-instagram" style="font-size:25px;"></i></a></span>
-          <span><a href="https://twitter.com/?lang=en" target="blank"><i class="fab fa-twitter-square" style="font-size:25px;"></i></a></span>
-          <span><a href="https://www.linkedin.com/" target="blank"><i class="fab fa-linkedin" style="font-size:25px;"></i></a></span>
-          </p>
-    </div>
+<footer id="dk-footer" class="dk-footer">
+  <div class="container-fluid">
+      <div class="row">
+          <div class="col-md-12 col-lg-5">
+              <div class="footer-left-widget">
+                  <a href="/" class="footer-logo">
+                      <img src="{{asset('/storage/frontend/img/'.$settings[0]->logo)}}" alt="footer_logo" height="70px">
+                  </a>
+                  <br><br>
+                      <div class="contactfooter">
+                          <p style="color:#878787;">{{$settings[0]->address}}</p>
+                    <a href=""><p style="color: #878787;"><i class="fas fa-phone-volume"></i> &NonBreakingSpace;<span>{{$settings[0]->phone}}<span> &NonBreakingSpace;<i class="fas fa-envelope"></i> &NonBreakingSpace;<span> business@paschimanchal.net</span></p></a>
+                      </div>
+                      
+                          
+                 
+                  <br>
+                  <div class="footer-social-link">
+                     
+                      <ul>
+                          <li>
+                              <a href="{{$settings[0]->facebook}}" target="blank">
+                                  <i class="fab fa-facebook"></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="https://www.instagram.com/?hl=en" target="blank">
+                                  <i class="fab fa-instagram"></i>
+                              </a>
+                          </li>
+                          <li>
+                              <a href="{{$settings[0]->twitter}}" target="blank">
+                                  <i class="fab fa-twitter"></i>
+                              </a>
+                          </li>
+                          
+                          <li>
+                              <a href="{{$settings[0]->linkedin}}" target="blank">
+                                  <i class="fab fa-linkedin"></i>
+                              </a>
+                          </li>
+                          
+                      </ul>
+                  </div>
+                  <!-- End Social link -->
+              </div>
+              <!-- End Footer info -->
+             
+          </div>
+          <!-- End Col -->
+          <div class="col-md-12 col-lg-7">
+              
+              <!-- End Contact Row -->
+              <div class="row">
+                  <div class="col-md-12 col-lg-5">
+                      <div class="footer-widget footer-left-widget">
+                          <div class="section-heading">
+                              <h4>Quick Links</h4>
+                              <span class="animate-border border-black"></span>
+                          </div>
+                          <ul>
+                              <li>
+                                  <a href="{{route('home')}}">Home</a>
+                              </li>
+                              <li>
+                                  <a href="{{route('about')}}">About Us</a>
+                              </li>
+                              <li>
+                                  <a href="{{route('portfolio')}}">Portfolio</a>
+                              </li>
+                              <li>
+                                  <a href="{{route('services')}}">Services</a>
+                              </li>
+                          
+                              <li>
+                                  <a href="{{route('news')}}">News & Events</a>
+                              </li>
+                              <li>
+                                  <a href="{{route('case_study')}}">Case Study</a>
+                              </li>
+                              <li>
+                                  <a href="{{route('contact')}}">Contact Us</a>
+                                
+                              </li>
+                              <li>
+                                <a href="{{route('home')}}">Career</a>
+                                <br><br>
+                            </li>
+                          </ul>
+                          
+                      </div>
+                      <!-- End Footer Widget -->
+                  </div>
+                  
+                  <!-- End col -->
+                  <div class="col-md-12 col-lg-6">
+                      <div class="footer-widget footer-left-widget">
+                          <div class="section-heading">
+                              <a href="news.html"><h4>News</h4></a>
+                              
+                            </div>
+                            <p><a href="news/newsdetail1.html" class="footernews">Telecommunication Advancement</a></p>
+                            <p><a href="news/newsdetail2.html" class="footernews">Our ADDS Installation Service</a></p>
+                            <p><a href="news/newsdetail3.html" class="footernews">We Build Relationship</a></p>
+                            <p><a href="news/newsdetail4.html" class="footernews">Fast Growing Fiber Services</a></p>
+                            
+                      </div>
+                      <!-- End footer widget -->
+                  </div>
+                  <!-- End Col -->
+                  <div class="col-lg-1">
+                  <!-- End Col -->
+              </div>
+              <!-- End Row -->
+          </div>
+          <!-- End Col -->
+      </div>
+      <!-- End Widget Row -->
   </div>
-  <br>
-		<div class="col-lg-3 contactfooter">
-            <h5>Head Office</h5>
-            <hr style="border-top: 1px solid grey;">
-			<p>	Gairaptan, Pokhara,Kaski, Nepal</p>
-			<p>Phone: +977-061-525629, 537220 </p>
-			<p>Fax: +977-061-537219</p>
-			<h5>Email</h5>
-            <hr style="border-top: 1px solid grey;">
-			<p>	business@paschimanchal.net</p>
-			<p>	paschimanchalsolution@gmail.com</p>
-            <a href="http://www.paschimanchal.net" target="blank"><p>www.paschimanchal.net</p></a>
-            
-			<br><br>
-		</div>
-		
-		<div class="col-lg-2 contactfooter">
-            <h5>Links</h5>
-            <hr style="border-top: 1px solid grey;">
-			<p><a href="index.html">Home</a></p>
-			<p><a href="about.html">About Us</a></p>
-			<p><a href="portfolio.html">Portfolio</a></p>
-      <p><a href="services.html">Services</a></p>
-      <p><a href="news.html">News & Events</a></p>
-      <p><a href="case.html">Case Study</a></p>
-            <p><a href="contact.html">Contact Us</a></p>
-			<br><br>
-        </div>
-        
-        
-		<div class="col-lg-2 newsfooter">
-            <h5>News</h5>
-            <hr style="border-top: 1px solid grey;">
-			<p>The unending cross training among each of the experienced employees has further 
-                enriched the company’s readiness to meet the demand of the future</p>
-		</div>
-		
-	</div>
-</div>
-    
+  <!-- End Contact Container -->     
+</footer>
 
     <script type="text/javascript" src="{{asset('frontend')}}/bootstrap/js/jquery.js"></script>
 
@@ -152,8 +234,9 @@
 
     <script type="text/javascript" src="{{asset('frontend')}}/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="{{asset('frontend')}}/js/script.js"></script>    
-    
+   
     <script>
+ 
       $('.owl-carousel').owlCarousel({
   loop:true,
   margin:80,

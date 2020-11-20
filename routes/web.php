@@ -8,9 +8,17 @@ Route::get('/about', 'Frontend\MainController@about')->name('about');
 Route::get('/contact', 'Frontend\MainController@contact')->name('contact');
 Route::get('/portfolio', 'Frontend\MainController@portfolio')->name('portfolio');
 Route::get('/service', 'Frontend\MainController@services')->name('services');
-Route::get('/news', 'Frontend\MainController@news')->name('news');
-Route::get('/case_study', 'Frontend\MainController@case_study')->name('case_study');
+Route::get('/news_events', 'Frontend\MainController@news')->name('news');
+Route::get('/jobs', 'Frontend\MainController@jobs')->name('jobs');
+Route::get('/jobs/{id}', 'Frontend\MainController@showJob')->name('job.show');
+Route::post('/jobs/apply/{id}', 'Frontend\MainController@apply')->name('job.apply');
 
+Route::get('/case_study', 'Frontend\MainController@case_study')->name('case_study');
+Route::get('/service/{id}', 'Frontend\MainController@showService')->name('service.show');
+Route::get('/portfolio/{id}', 'Frontend\MainController@showPortfolio')->name('portfolio.show');
+Route::get('/portfolio/{id}', 'Frontend\MainController@showPortfolio')->name('portfolio.show');
+Route::post('/contact/send', 'Backend\ContactController@store')->name('contact.store');
+Route::get('/news_events/{id}', 'Frontend\MainController@showNews')->name('new_events.show');
 
 Route::group(['middleware' => ['auth']], function () {
 
@@ -30,10 +38,25 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/projects', 'Backend\ProjectsController');
     Route::resource('/board_members', 'Backend\BoardMemberController');
     Route::resource('/whyWe', 'Backend\WhyWeController');
+    Route::resource('/news', 'Backend\NewsController');
+    Route::resource('/portfolios', 'Backend\PortfolioController');
+    Route::resource('/careers', 'Backend\CareerController');
+
+
     Route::resource('/services', 'Backend\ServicesController');
+
+    Route::get('/queries', 'Backend\ContactController@show')->name('contact.show');
+    Route::get('/applicants', 'Backend\ApplicantController@index')->name('application.index');
+
     Route::get('/about_us', 'Backend\AboutController@index')->name('about.index');
     Route::get('/about_us/{id}/edit', 'Backend\AboutController@edit')->name('about.edit');
     Route::post('/about_us/{id}/update', 'Backend\AboutController@update')->name('about.update');
+
+Route::get('/settings', 'Backend\SettingsController@index')->name('settings.index');
+    Route::get('/settings/{id}/edit', 'Backend\SettingsController@edit')->name('settings.edit');
+    Route::post('/settings/{id}/update', 'Backend\SettingsController@update')->name('settings.update');
+   
+
 
     Route::get('/user/status/{id}', 'UserController@status');
     Route::get('/slider/status/{id}', 'Backend\SliderController@status');

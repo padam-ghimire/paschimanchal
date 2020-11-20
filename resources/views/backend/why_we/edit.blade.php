@@ -39,13 +39,6 @@
 
         <!-- /.input group -->
         </div>
-      
-
-        <div class="form-group {{ ($errors->has('status'))?'has-error':'' }}">
-            <label for="status">{{trans('app.status')}} </label><br>
-            {{Form::radio('status', 'active',true,['class'=>'minimal-red'])}} {{trans('app.active')}} &nbsp;&nbsp;&nbsp;
-            {{Form::radio('status', 'inactive',null,['class'=>'minimal-red'])}} {{trans('app.inactive')}}
-        </div>
         <!-- /.form group -->
         <div class="box-footer">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

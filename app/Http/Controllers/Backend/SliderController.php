@@ -137,7 +137,7 @@ class SliderController extends BaseController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(SliderRequest $request, $id)
     {
         $id = (int)$id;
         try {
@@ -161,7 +161,7 @@ class SliderController extends BaseController
                         if ($oldValue->image != null)
                             @unlink(storage_path() . 'public/uploads/images/slider' . $oldValue->image);
                             Storage::putFileAs('public/uploads/images/slider', $sliderImage, $sliderImageName);
-                            Image::make(storage_path() . '/app/public/uploads/images/slider/' . $sliderImageName)->resize(700, 540)->save();
+                            Image::make(storage_path() . '/app/public/uploads/images/slider/' . $sliderImageName)->save();
                     }
 
                     session()->flash('success', 'Slider Successfully updated!');

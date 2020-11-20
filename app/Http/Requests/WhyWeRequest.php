@@ -24,7 +24,9 @@ class WhyWeRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'title'=>'required',
+            'sub_title'=>'required',
+            'description'=>'required',
         ];
     }
 }

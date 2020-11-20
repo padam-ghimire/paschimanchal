@@ -1,23 +1,106 @@
-.backgroundLogin{
-    background-image:url(../uploads/images/backgroundLogin.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    position:fixed;
-    width:100%;
-    top:0;
-    left:0;
+.backgroundLogin {
+  background-image: url(../uploads/images/backgroundLogin.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
-.loginSystem{
-    font-size: 15px;  color: #0b58a2;
+.loginSystem {
+  font-size: 15px;
+  color: #0b58a2;
 }
 
-.loginTitle b{
-    font-size: 18px; text-align: center; color: #9f191f
+.loginTitle b {
+  font-size: 18px;
+  text-align: center;
+  color: #9f191f;
 }
 
 .boxTopButton {
-    margin-right: 5px;
+  margin-right: 5px;
+}
+
+.cardTopButton {
+  margin-right: 5px;
+}
+
+.table-responsive {
+  display: table !important;
+}
+
+#nav {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+#nav li {
+  float: left;
+  margin-right: 20px;
+  margin-top: 3px;
+  font-size: 14px;
+}
+#nav li a {
+  color: #333333;
+  text-decoration: none;
+}
+#nav li a:hover {
+  color: #006699;
+  text-decoration: none;
+}
+
+#notification_li {
+  position: relative;
+}
+#containNotification {
+  background-color: #fff;
+  border: 1px solid rgba(100, 100, 100, 0.4);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+  overflow: visible;
+  position: absolute;
+  top: 30px;
+  margin-left: -270px;
+  width: 400px;
+  z-index: -1;
+  display: none;
+}
+
+#notificationTitle {
+  padding: 8px;
+  font-size: 13px;
+  background-color: #ffffff;
+  /* position: fixed; */
+  z-index: 1000;
+  width: 384px;
+  border-bottom: 1px solid #dddddd;
+}
+#notificationsBody {
+  text-align: justify;
+  margin-left: 2px;
+  /* padding: 33px 0px 0px 0px !important; */
+  min-height: 20px;
+}
+#notificationFooter {
+  background-color: #e9eaed;
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+  border-top: 1px solid #dddddd;
+}
+
+#counter {
+  padding: 3px 7px 3px 7px;
+  background: #cc0000;
+  color: #ffffff;
+  margin-left: 77px;
+  border-radius: 9px;
+  -moz-border-radius: 9px;
+  -webkit-border-radius: 9px;
+  position: absolute;
+  margin-top: -11px;
+  font-size: 11px;
 }

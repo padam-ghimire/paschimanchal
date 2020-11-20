@@ -78,7 +78,7 @@ class BoardMemberController extends BaseController
              if ($boardMember) {
                  if (isset($memberImageSuccess)) {
                      Storage::putFileAs('public/uploads/images/board_member', $memberImage, $imageName);
-                     Image::make(storage_path() . '/app/public/uploads/images/board_member/' . $imageName)->resize(700, 540)->save();
+                     Image::make(storage_path() . '/app/public/uploads/images/board_member/' . $imageName)->save();
                      session()->flash('success', 'Board Member Successfully Created!');
                      return back();
                  }
@@ -144,7 +144,7 @@ class BoardMemberController extends BaseController
       * @param  int  $id
       * @return \Illuminate\Http\Response
       */
-     public function update(Request $request, $id)
+     public function update(BoardMemberRequest $request, $id)
      {
 
         // return $request;

@@ -49,6 +49,9 @@
                                                 <th>Client</th>
                                                 <th>Area</th>
                                                 <th >Year</th>
+                                                <th >Contract Name</th>
+                                                <th >Quantity</th>
+                                                <th >Description</th>
                                                 <th >Action</th>
                                             </tr>
                                             </thead>
@@ -58,9 +61,13 @@
                                                 <tr>
                                                     <th scope=row>{{$i}}</th>
                                                     <td>{{$project->name}}</td>
+                                                   
                                                     <td>{{$project->client->name}}</td>
                                                     <td>{{$project->area}}</td>
                                                     <td>{{$project->year}}</td>
+                                                    <td>{{$project->contract_name}}</td>
+                                                    <td>{{$project->quantity}}</td>
+                                                    <td>{{$project->description}}</td>
                                             
                                                     
 

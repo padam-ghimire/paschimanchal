@@ -40,6 +40,40 @@
 
         <!-- /.input group -->
         </div>
+
+          <!-- /.input group -->
+          <div class="form-group {{ ($errors->has('contract_name'))?'has-error':'' }}">
+            <label>Contract Name
+               
+            </label>
+            {!! Form::text('contract_name',null,['class'=>'form-control','placeholder' => 'Nepal project']) !!}
+            {!! $errors->first('contract_name', '<span class="text-danger">:message</span>') !!}
+
+        <!-- /.input group -->
+        </div>
+
+           <!-- /.input group -->
+           <div class="form-group {{ ($errors->has('quantity'))?'has-error':'' }}">
+            <label>Quantity(KM)
+               
+            </label>
+            {!! Form::text('quantity',null,['class'=>'form-control','placeholder' => '50km']) !!}
+            {!! $errors->first('quantity', '<span class="text-danger">:message</span>') !!}
+
+        <!-- /.input group -->
+        </div>
+
+
+           <!-- /.input group -->
+           <div class="form-group {{ ($errors->has('description'))?'has-error':'' }}">
+            <label>Description
+               
+            </label>
+            {!! Form::textarea('description',null,['class'=>'form-control','placeholder' => '']) !!}
+            {!! $errors->first('description', '<span class="text-danger">:message</span>') !!}
+
+        <!-- /.input group -->
+        </div>
         <!-- /.form group -->
         <div class="box-footer">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
