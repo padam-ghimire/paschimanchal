@@ -8,6 +8,7 @@ use App\Models\WhyWe;
 use App\Models\Career;
 use App\Models\Client;
 use App\Models\Slider;
+use App\Models\Mission;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\BoardMember;
@@ -33,8 +34,9 @@ class MainController extends Controller
 
     public function about(){
         $about=About::all();
+        $missions=Mission::all();
         $boardMembers=BoardMember::all();
-        return view('frontend.about',compact('about','boardMembers'));
+        return view('frontend.about',compact('about','boardMembers','missions'));
     }
 
     public function contact(){
@@ -105,7 +107,7 @@ class MainController extends Controller
                  $cvFile = $request->file('cv');
                  $fileExtension = $cvFile->getClientOriginalExtension();
                  $cvName = 'cv' . time() . '.' . strtolower($fileExtension);
-                $value['job_id']=$id;
+                 $value['job_id']=$id;
                  $value['cv'] = $cvName;
                  $cvSuccess = true;
              }

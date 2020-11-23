@@ -21,57 +21,24 @@
   <hr class="featurette-divider my-4">
     <div class="container">
     <div class="row mb-2">
+
+@foreach($missions as $mission)
       <div class="col-md-6">
         <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: rgb(240, 240, 240);font-size: 15px;">
           <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary">Mission/Vision</strong>
-            <h5 class="mb-0">Our Missions</h5>
+            <strong class="d-inline-block mb-2 text-primary">{{$mission->title}}</strong>
+            <h5 class="mb-0">Our {{$mission->title}}</h5>
             <div class="mb-1 text-muted">The company is growing as the leading vender of
               all the major telecom companies in Nepal. </div>
             <p class=" mb-auto">
-              <ul>
-                <li>We have well equipped, well trained and
-                  well qualified manpower. Our mission is to
-                  become one of the top level vendor of telecom
-                  companies in Nepal.</li>
-                <li>As we move towards our goal to become the
-                  largest company in the field of fiber optics
-                  installation, we are aiming to work in the
-                  installation of OPGW, OFC type of fibers.</li>
-                <li>We are well equipped and well familiar in cable
-                  installation, we are planning to work in electricity
-                  transmission line sector as well.</li>
-              </ul>
+             {!! $mission->description !!}
             </p>
           </div>
           
         </div>
       </div>
-      <div class="col-md-6">
-        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="background-color: rgb(240, 240, 240); font-size: 15px;">
-          <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary">Business Plan</strong>
-            <h5 class="mb-0">Business Plan</h5>
-            <div class="mb-1 text-muted">To achieve the goals and to meet the vision of
-              the company, our business plan are as follows:</div>
-            <p class="mb-auto">
-              <ul>
-                <li>We have service center located in different
-                  parts of Nepal: Itharahi, Birgunj, Naryanghat,
-                  Butwal, Pokhra, Nepalgunj and Kathmandu.</li>
-                <li>We also have suitable and well managed
-                  offices, capable manpower & equipped
-                  machines to work this type of function.</li>
-                <li>On the basis of our enough and qualified
-                  manpower, managed service center, we
-                  are ready to work in multiple projects
-                  simultaneously.</li>
-              </ul>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+     
+     @endforeach
   </div>
 </div>
 
