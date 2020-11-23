@@ -26,8 +26,8 @@
                         <span class="info-box-icon bg-aqua"><i class="fa fa-list-alt"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text"><a href="complaint-list.php" style="color: #0a0a0a">TOTAL COMPLAINTS</a></span>
-                            <span class="info-box-number">410</span>
+                            <span class="info-box-text"><a href="services" style="color: #0a0a0a">TOTAL SERVICES</a></span>
+                            <span class="info-box-number">{{$services}}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -39,8 +39,8 @@
                         <span class="info-box-icon bg-red"><i class="fa fa-list-alt"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text"><a href="pendingComplaintsForChiefC.php" style="color:#0a0a0a; ">PENDING COMPLAINTS</a></span>
-                            <span class="info-box-number">44</span>
+                            <span class="info-box-text"><a href="/news" style="color:#0a0a0a; ">TOTAL NEWS</a></span>
+                            <span class="info-box-number">{{$news}}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -53,8 +53,8 @@
                         <span class="info-box-icon bg-aqua"><i class="fa fa-list-alt"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text"><a href="approvedSmritiPatra.php" style="color:#0a0a0a; ">APPROVED SMRITIPATRA</a></span>
-                            <span class="info-box-number">90</span>
+                            <span class="info-box-text"><a href="/queries" style="color:#0a0a0a; ">TOTAL QUERIES</a></span>
+                            <span class="info-box-number">{{$queries}}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -66,8 +66,23 @@
                         <span class="info-box-icon bg-red"><i class="fa fa-list-alt"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text"><a href="pendingSmritiPatra.php" style="color:#0a0a0a; ">PENDING SMRITIPATRA</a></span>
-                            <span class="info-box-number">41</span>
+                            <span class="info-box-text"><a href="/slider" style="color:#0a0a0a; ">TOTAL SLIDERS</a></span>
+                            <span class="info-box-number">{{$sliders}}</span>
+                        </div>
+                        <!-- /.info-box-content -->
+                    </div>
+                    <!-- /.info-box -->
+                </div>
+                <!-- /.col -->
+
+                   <!-- /.col -->
+                   <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="info-box">
+                        <span class="info-box-icon bg-red"><i class="fa fa-list-alt"></i></span>
+
+                        <div class="info-box-content">
+                            <span class="info-box-text"><a href="/board_members" style="color:#0a0a0a; ">TOTAL BOARD MEMBERS</a></span>
+                            <span class="info-box-number">{{$boardMembers}}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -80,8 +95,8 @@
                         <span class="info-box-icon bg-aqua"><i class="fa fa-list-alt"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text"><a href="approvedScreening.php" style="color:#0a0a0a; ">APPROVED SCREENING</a></span>
-                            <span class="info-box-number">35</span>
+                            <span class="info-box-text"><a href="/mission" style="color:#0a0a0a; ">TOTAL MISSIONS</a></span>
+                            <span class="info-box-number">{{$missions}}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -93,8 +108,8 @@
                         <span class="info-box-icon bg-red"><i class="fa fa-list-alt"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text"><a href="pendingScreening.php" style="color:#0a0a0a; ">PENDING SCREENING</a></span>
-                            <span class="info-box-number">20</span>
+                            <span class="info-box-text"><a href="/projects" style="color:#0a0a0a; ">TOTAL PROJECTS</a></span>
+                            <span class="info-box-number">{{$projects}}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -105,8 +120,8 @@
                         <span class="info-box-icon bg-aqua"><i class="fa fa-list-alt"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text"><a href="Case-list.php">Total Case</a></span>
-                            <span class="info-box-number">90<small></small></span>
+                            <span class="info-box-text"><a href="/clients">TOTAL CLIENTS</a></span>
+                            <span class="info-box-number">{{$clients}}<small></small></span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -118,8 +133,8 @@
                         <span class="info-box-icon bg-red"><i class="fa fa-list-alt"></i></span>
 
                         <div class="info-box-content">
-                            <span class="info-box-text"><a href="tamili.php" style="color:#0a0a0a; ">Tamili</a></span>
-                            <span class="info-box-number">20</span>
+                            <span class="info-box-text"><a href="whyWe" style="color:#0a0a0a; ">TOTAL WHY WE?</a></span>
+                            <span class="info-box-number">{{$whyWes}}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
