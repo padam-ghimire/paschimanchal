@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: santosh
- * Date: 3/20/18
- * Time: 3:48 PM
- */
 
 namespace App\Repository\Roles;
 

@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: ym
- * Date: 3/26/18
- * Time: 11:29 AM
- */
+
 
 namespace App\Repository\Configurations;
 
