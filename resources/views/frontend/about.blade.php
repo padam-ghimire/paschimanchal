@@ -109,7 +109,7 @@
                                     </p>
                                     <h5 class="card-title">{{$boardMember->designation->designation_name}}</h5>
                                     <p class="card-text">{{$boardMember->name}}</p>
-                                    <a href="https://www.fiverr.com/share/qb8D02" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                    
                                 </div>
                             </div>
                         </div>

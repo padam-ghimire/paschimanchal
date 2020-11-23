@@ -248,6 +248,16 @@ class MenusTableSeeder extends Seeder
                 'menu_status' => '1',
                 'menu_order' => '16'
             ],
+            [
+                'parent_id' => '14',
+                'menu_name' => 'Map',
+                'menu_link' => '/map',
+                'menu_controller' => 'MapController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-gears" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '16'
+            ],
 
             [
                 'parent_id' => '0',

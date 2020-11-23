@@ -117,7 +117,7 @@
                   <br><br>
                       <div class="contactfooter">
                           <p style="color:#878787;">{{$settings[0]->address}}</p>
-                    <a href=""><p style="color: #878787;"><i class="fas fa-phone-volume"></i> &NonBreakingSpace;<span>{{$settings[0]->phone}}<span> &NonBreakingSpace;<i class="fas fa-envelope"></i> &NonBreakingSpace;<span> business@paschimanchal.net</span></p></a>
+                    <a href=""><p style="color: #878787;"><i class="fas fa-phone-volume"></i> &NonBreakingSpace;<span>{{$settings[0]->phone}}<span> &NonBreakingSpace;<i class="fas fa-envelope"></i> &NonBreakingSpace;<span>{{$settings[0]->email}}</span></p></a>
                       </div>
                       
                           

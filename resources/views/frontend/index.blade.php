@@ -121,7 +121,7 @@
                         </div>
                         <div class="col-md-7">
                             <h5>Support</h5>
-                            <p><small>After the completion of project we support the enhancement of the peoject.</small></p>
+                            <p><small>After the completion of project we support the enhancement of the project.</small></p>
                         </div>
                     </div>
                     <div class="process-line-r"></div>
@@ -163,7 +163,7 @@
                 <p>{{$whyWe->description}}</p>
            
             </ul>
-            <a href="contact.html"><button type="button" class="btn btn-sm btn-block btn-outline-primary">Join With Us</button></a>
+            <a href="/contact"><button type="button" class="btn btn-sm btn-block btn-outline-primary">Join With Us</button></a>
           </div>
         </div>
         @endforeach

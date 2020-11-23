@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
         $this->call(BoardMemeberSeeder::class);
         $this->call(AboutSeeder::class);
         $this->call(SettingsSeeder::class);
+        $this->call(MapSeeder::class);
         
 
         DB::statement('SET FOREIGN_KEY_CHECKS=1;');
