@@ -17,7 +17,7 @@
         <div class="col-md-7">
           <h4 class="" style="text-align: center;">{{$service->title}}</h4>
           <br>
-          <p>{{$service->description}}</p>
+          <p>{!! $service->description !!}</p>
         </div>
         <div class="col-md-5">
           <img src="{{asset('storage/uploads/images/services')}}/{{$service->image}}" alt="" width="500" height="500" class="img-fluid">

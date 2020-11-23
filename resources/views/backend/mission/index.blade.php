@@ -6,12 +6,12 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-               Services
+         Mission
             </h1>
             <ol class="breadcrumb">
                 <li><a href="#"><i class="fa fa-dashboard"></i> {{trans('app.dashboard')}}</a></li>
       
-                <li class="active">services</li>
+                <li class="active">mission</li>
             </ol>
         </section>
         <!-- Main content -->
@@ -28,10 +28,10 @@
                                 @endif
                                 <div class="box box-default">
                                     <div class="box-header with-border">
-                                        <h3 class="box-title">Services</h3>
+                                        <h3 class="box-title">Why We</h3>
                                         <?php
 
-                                        $permission = helperPermissionLink('services', 'services');
+                                        $permission = helperPermissionLink('mission', 'mission');
 
                                         $allowEdit = $permission['isEdit'];
 
@@ -46,52 +46,26 @@
                                             <tr>
                                                 <th style="width: 10px;">S.N</th>
                                                 <th>Title</th>
+                                             
                                                 <th>Description</th>
-                                                <th >Image</th>
 
-                                                <th>Design</th>
-
-                                                <th>Deployment</th>
-                                                   
-                                                    <th>Testing</th>
-                                                    <th>Support</th>
-                                            
-                                                <th>Action</th>
+                      
+                                
                                             </tr>
                                             </thead>
                                             <tbody>
                                             <?php $i = 1;?>
-                                            @forelse($services as $service)
+                                            @forelse($missions as $mission)
                                                 <tr>
                                                     <th scope=row>{{$i}}</th>
-                                                    <td>{{$service->title}}</td>
-                                                    <td>{!! $service->description !!}</td>
-                                                    <td><img src="{{asset('/storage/uploads/images/services/'.$service->image)}}" height=100px alt="" srcset=""></td>
-                                                    <td>{{$service->design}}</td>
-                                                    <td>{{$service->deployment}}</td>
-                                                    <td>{{$service->testing}}</td>
-                                                    <td>{{$service->support}}</td>
-                                            
-
-
-                                                    <td class="text-center">
-                                                        @if($service->status == 'active')
-                                                            <a  class="label label-success stat" href="{{url('services/status',$service->id)}}">
-                                                                <strong class="stat"> {{trans('app.active')}}
-                                                                </strong>
-                                                            </a>
-
-                                                        @elseif($service->status == 'inactive')
-                                                            <a class="label label-danger stat" href="{{url('service/status',$service->id)}}">
-                                                                <strong class="stat"> {{trans('app.inactive')}}
-                                                                </strong>
-                                                            </a>
-                                                        @endif
-                                                    </td>
+                                                    <td>{{$mission->title}}</td>
+                                                  
+                                                    <td>{!! $mission->description !!}</td>
+                                     
 
                                                     <td class="text-right">
                                                         @if($allowEdit)
-                                                            <a href="{{route('services.edit',[$service->id])}}"
+                                                            <a href="{{route('mission.edit',[$mission->id])}}"
                                                                class="text-info btn btn-xs btn-default" data-toggle="tooltip"
                                                                data-placement="top" title="Edit">
                                                                 <i class="fa fa-pencil-square-o"></i>
@@ -99,8 +73,8 @@
                                                         @endif
 
                                                         @if($allowDelete)
-                                                            {!! Form::open(['method' => 'DELETE', 'route'=>['services.destroy',
-                                                                $service->id],'class'=> 'inline']) !!}
+                                                            {!! Form::open(['method' => 'DELETE', 'route'=>['mission.destroy',
+                                                                $mission->id],'class'=> 'inline']) !!}
                                                             <button type="submit"
                                                                     class="btn btn-danger btn-xs deleteButton actionIcon"
                                                                     data-toggle="tooltip"
@@ -131,9 +105,9 @@
 
                                 <div class="col-md-3">
                                     @if(\Request::segment(3)=='edit')
-                                        @include('backend.services.edit')
+                                        @include('backend.mission.edit')
                                     @else
-                                        @include('backend.services.add')
+                                        @include('backend.mission.add')
                                     @endif
 
                                 </div>

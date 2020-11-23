@@ -20,6 +20,18 @@
         <!-- /.input group -->
         </div>
 
+
+           <!-- /.input group -->
+           <div class="form-group {{ ($errors->has('description'))?'has-error':'' }}">
+            <label>Service Description
+                <label class="text-danger"> *</label>
+            </label>
+            {!! Form::textarea('description',null,['class'=>'form-control','id'=>'summernote','placeholder' => 'Optical Fiber']) !!}
+            {!! $errors->first('description', '<span class="text-danger">:message</span>') !!}
+
+        <!-- /.input group -->
+        </div>
+
          <!-- /.input group -->
          <div class="form-group {{ ($errors->has('design'))?'has-error':'' }}">
             <label>Design Section

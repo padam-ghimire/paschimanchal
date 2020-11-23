@@ -140,7 +140,7 @@
   
 <section class="jumbotron text-center my-4">
   <div class="container">
-    <a href="portfolio.html"><h3 class="jumbotron-heading" style="color:#34495E;">Why Paschimanchal?</h3></a>
+    <a href="/portfolio"><h3 class="jumbotron-heading" style="color:#34495E;">Why Paschimanchal?</h3></a>
     <p class="">Paschimanchal Solution Pvt. Ltd. was established to
       be responsive to the emerging new technologies in the
       communication industry by constantly monitoring new
@@ -160,7 +160,7 @@
           <div class="card-body">
             <h5 class="card-title pricing-card-title">{{$whyWe->sub_title}}</h5>
             <ul class="list-unstyled mt-3 mb-4">
-                <p>{{$whyWe->description}}</p>
+                <p>{!! $whyWe->description !!}</p>
            
             </ul>
             <a href="/contact"><button type="button" class="btn btn-sm btn-block btn-outline-primary">Join With Us</button></a>
@@ -195,12 +195,12 @@
                         <div class="content-overlay"></div> <img class="content-image img-fluid" src="{{asset('/storage/uploads/images/services/'.$service->image)}}" style="height: 225px; width: 100%; display: block;">
                         <div class="content-details fadeIn-bottom">
                             <p class="content-text">
-                            {{$service->description}}
+                            {!! $service->description !!}
                             </p>
                         </div>
                     </a></div>
                     <hr class="featurette-divider">
-                <div class="overlay"><a href="/service"><h6>{{$service->title}}</h6></a></div>
+                <div class="overlay"><a href="/service/{{$service->id}}"><h6>{{$service->title}}</h6></a></div>
             </div>
             @endforeach
         </div>

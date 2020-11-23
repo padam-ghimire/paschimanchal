@@ -67,7 +67,7 @@
                                                     <td>{{$project->year}}</td>
                                                     <td>{{$project->contract_name}}</td>
                                                     <td>{{$project->quantity}}</td>
-                                                    <td>{{$project->description}}</td>
+                                                    <td>{!! $project->description !!}</td>
                                             
                                                     
 

@@ -69,7 +69,7 @@
             <label>Description
                
             </label>
-            {!! Form::textarea('description',null,['class'=>'form-control','placeholder' => '']) !!}
+            {!! Form::textarea('description',null,['class'=>'form-control','id'=>'summernote','placeholder' => '']) !!}
             {!! $errors->first('description', '<span class="text-danger">:message</span>') !!}
 
         <!-- /.input group -->

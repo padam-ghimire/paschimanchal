@@ -26,7 +26,7 @@
               <div class="card-body">
                 <h5 class="card-title" style="text-align: center;">{{$news->title}}</h5>
                 <hr>
-                <p>{{$news->description}}
+                <p>{!! $news->description !!}
                    </p>
               </div>
             </div>

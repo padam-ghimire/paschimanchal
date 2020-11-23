@@ -22,7 +22,7 @@
             <label>News Description
                 <label class="text-danger"> *</label>
             </label>
-            {!! Form::textarea('description',null,['class'=>'form-control','placeholder' => 'News Description']) !!}
+            {!! Form::textarea('description',null,['class'=>'form-control','id'=>'summernote','placeholder' => 'News Description']) !!}
             {!! $errors->first('description', '<span class="text-danger">:message</span>') !!}
         </div>
       

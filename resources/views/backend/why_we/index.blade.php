@@ -60,7 +60,7 @@
                                                     <th scope=row>{{$i}}</th>
                                                     <td>{{$whyWe->title}}</td>
                                                     <td>{{$whyWe->sub_title}}</td>
-                                                    <td>{{$whyWe->description}}</td>
+                                                    <td>{!! $whyWe->description !!}</td>
                                                     <td class="text-center">
                                                         @if($whyWe->status == 'active')
                                                             <a  class="label label-success stat" href="{{url('whyWe/status',$whyWe->id)}}">

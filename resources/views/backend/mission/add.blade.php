@@ -1,32 +1,24 @@
 <div class="box box-default">
     <div class="box-header with-border">
-        <h3 class="box-title">{{trans('app.edit')}} &nbsp;</h3>
+        <h3 class="box-title">Mission?&nbsp;</h3>
 
     </div>
     <div class="box-body">
+    {!! Form::open(['method'=>'post','url'=>'/mission','enctype'=>'multipart/form-data']) !!}
 
-        {!! Form::model($edits,['method'=>'PUT','enctype'=>'multipart/form-data','route'=>['whyWe.update',$edits->id]]) !!}
 
-
+    <!-- /.input group -->
         <div class="form-group {{ ($errors->has('title'))?'has-error':'' }}">
             <label>Title
                 <label class="text-danger"> *</label>
             </label>
-            {!! Form::text('title',null,['class'=>'form-control','placeholder' => 'Why we title']) !!}
+            {!! Form::text('title',null,['class'=>'form-control','placeholder' => 'Mission title']) !!}
             {!! $errors->first('title', '<span class="text-danger">:message</span>') !!}
 
         <!-- /.input group -->
         </div>
      
-         <!-- /.input group -->
-         <div class="form-group {{ ($errors->has('sub_title'))?'has-error':'' }}">
-            <label>Sub title
-                <label class="text-danger"> *</label>
-            </label>
-            {!! Form::text('sub_title',null,['class'=>'form-control','placeholder' => 'Sub title']) !!}
-            {!! $errors->first('sub_title', '<span class="text-danger">:message</span>') !!}
-
-        </div>
+      
         <!-- /.input group -->
 
           <!-- /.input group -->
@@ -39,16 +31,23 @@
 
         <!-- /.input group -->
         </div>
+      
+        
+        <!-- /.input group -->
+        </div>
+      
         <!-- /.form group -->
         <div class="box-footer">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <button type="submit" class="btn btn-primary">{{trans('app.update')}}</button>
+                <button type="submit" class="btn btn-primary">{{trans('app.save')}}&nbsp;</button>
             </div>
             <!-- /.box-footer -->
+
         </div>
         {!! Form::close() !!}
-
 
     </div>
     <!-- /.box-body -->
 </div>
+<!-- /.box -->
+

@@ -5,29 +5,20 @@
     </div>
     <div class="box-body">
 
-        {!! Form::model($edits,['method'=>'PUT','enctype'=>'multipart/form-data','route'=>['whyWe.update',$edits->id]]) !!}
+        {!! Form::model($edits,['method'=>'PUT','enctype'=>'multipart/form-data','route'=>['mission.update',$edits->id]]) !!}
 
 
         <div class="form-group {{ ($errors->has('title'))?'has-error':'' }}">
             <label>Title
                 <label class="text-danger"> *</label>
             </label>
-            {!! Form::text('title',null,['class'=>'form-control','placeholder' => 'Why we title']) !!}
+            {!! Form::text('title',null,['class'=>'form-control','placeholder' => 'Mission title']) !!}
             {!! $errors->first('title', '<span class="text-danger">:message</span>') !!}
 
         <!-- /.input group -->
         </div>
      
-         <!-- /.input group -->
-         <div class="form-group {{ ($errors->has('sub_title'))?'has-error':'' }}">
-            <label>Sub title
-                <label class="text-danger"> *</label>
-            </label>
-            {!! Form::text('sub_title',null,['class'=>'form-control','placeholder' => 'Sub title']) !!}
-            {!! $errors->first('sub_title', '<span class="text-danger">:message</span>') !!}
-
-        </div>
-        <!-- /.input group -->
+   
 
           <!-- /.input group -->
           <div class="form-group {{ ($errors->has('description'))?'has-error':'' }}">

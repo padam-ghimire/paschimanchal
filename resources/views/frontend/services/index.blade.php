@@ -66,7 +66,7 @@
           <img class="card-img-top" src="{{asset('storage/uploads/images/services/')}}/{{$service->image}}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{$service->title}}</h5>
-            <p class="card-text">{{ Illuminate\Support\Str::limit($service->description, 100) }}
+            <p class="card-text">{!! Illuminate\Support\Str::limit($service->description,50) !!}
               </p>
             <a href="{{route('service.show',[$service->id])}}" class="btn btn-md btn-primary">Read More</a>
           </div>

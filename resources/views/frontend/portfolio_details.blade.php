@@ -49,7 +49,7 @@
                 
                   <tr>
                     <td colspan="2">Description</td>
-                    <td colspan="2">{{$portfolio->description}}</td>
+                    <td colspan="2">{!! $portfolio->description !!}</td>
                   </tr>
                   <tr>
                     <td colspan="2">Quantity(Km)</td>

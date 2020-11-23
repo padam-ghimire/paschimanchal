@@ -42,6 +42,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/portfolios', 'Backend\PortfolioController');
     Route::resource('/careers', 'Backend\CareerController');
     Route::resource('/map', 'Backend\MapController');
+    Route::resource('/mission', 'Backend\MissionController');
 
 
     Route::resource('/services', 'Backend\ServicesController');

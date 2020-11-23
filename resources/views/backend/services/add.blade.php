@@ -23,7 +23,7 @@
             <label>Service Description
                 <label class="text-danger"> *</label>
             </label>
-            {!! Form::textarea('description',null,['class'=>'form-control','placeholder' => 'Optical Fiber']) !!}
+            {!! Form::textarea('description',null,['class'=>'form-control','id'=>'summernote','placeholder' => 'Optical Fiber']) !!}
             {!! $errors->first('description', '<span class="text-danger">:message</span>') !!}
 
         <!-- /.input group -->

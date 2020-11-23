@@ -34,7 +34,7 @@
             <label>Description
                 <label class="text-danger"> *</label>
             </label>
-            {!! Form::textarea('description',null,['class'=>'form-control','placeholder' => 'Your Description']) !!}
+            {!! Form::textarea('description',null,['class'=>'form-control','id'=>'summernote','placeholder' => 'Your Description']) !!}
             {!! $errors->first('description', '<span class="text-danger">:message</span>') !!}
 
         <!-- /.input group -->

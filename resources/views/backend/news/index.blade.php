@@ -64,7 +64,7 @@
                                                   
                                                     <td><img src="{{asset('/storage/uploads/images/news/'.$news->image)}}" height=100px alt="" srcset=""></td>
 
-                                                    <td>{{$news->description}}</td>
+                                                    <td>{!! $news->description !!}</td>
 
 
                                                     <td class="text-right">
