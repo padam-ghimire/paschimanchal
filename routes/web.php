@@ -13,10 +13,11 @@ Route::get('/jobs', 'Frontend\MainController@jobs')->name('jobs');
 Route::get('/jobs/{id}', 'Frontend\MainController@showJob')->name('job.show');
 Route::post('/jobs/apply/{id}', 'Frontend\MainController@apply')->name('job.apply');
 
-Route::get('/case_study', 'Frontend\MainController@case_study')->name('case_study');
+Route::get('/case_studies', 'Frontend\MainController@case_study')->name('case_study');
+Route::get('/case_studies/{id}', 'Frontend\MainController@showCase')->name('case_study.show');
 Route::get('/service/{id}', 'Frontend\MainController@showService')->name('service.show');
 Route::get('/portfolio/{id}', 'Frontend\MainController@showPortfolio')->name('portfolio.show');
-Route::get('/portfolio/{id}', 'Frontend\MainController@showPortfolio')->name('portfolio.show');
+// Route::get('/portfolio/{id}', 'Frontend\MainController@showPortfolio')->name('portfolio.show');
 Route::post('/contact/send', 'Backend\ContactController@store')->name('contact.store');
 Route::get('/news_events/{id}', 'Frontend\MainController@showNews')->name('new_events.show');
 
@@ -46,6 +47,7 @@ Route::group(['middleware' => ['auth']], function () {
 
 
     Route::resource('/services', 'Backend\ServicesController');
+    Route::resource('/case_study', 'Backend\CaseStudyController');
 
     Route::get('/queries', 'Backend\ContactController@show')->name('contact.show');
     Route::get('/applicants', 'Backend\ApplicantController@index')->name('application.index');

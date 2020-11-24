@@ -72,12 +72,13 @@
             <li class="nav-item">
               <a class="nav-link" href="{{route('news')}}">News & Events</a>
             </li>
+            
             <li class="nav-item ">
               <div style="width:20px;"></div>
               </li>
-            <!-- <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="{{route('case_study')}}">Case Study</a>
-              </li> -->
+              </li>
               <li class="nav-item ">
                 <div style="width:20px;"></div>
                 </li>

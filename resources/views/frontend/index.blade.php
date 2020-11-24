@@ -10,8 +10,8 @@
         <br><br>
       <p class="">{{$about[0]->description}}</p>
       <p>
-        <a href="about.html" class="btn btn-primary my-2">More About Us</a>
-        <a href="contact.html" class="btn btn-secondary my-2">Reach Out To Us</a>
+        <a href="/about" class="btn btn-primary my-2">More About Us</a>
+        <a href="contact" class="btn btn-secondary my-2">Reach Out To Us</a>
       </p>
     </div>
   </section>
@@ -225,24 +225,42 @@
 </div>
 </div>
 <br><br>
-<br><br>
+
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <a href="/portfolio"><h3 class="jumbotron-heading " style="color:#34495E;">Undertaken And Completed Projects</h3></a>
+    <p class="">Our company has taken many projects associating with the communication and network.We have successfully managed to complete them in time with happy cusotmers. </p>
+    <p>
+    </p>
+  </div>
+</section>
 
 <div class="container">
-  <div class="owl-carousel owl-theme port">
+  <div class="owl-carousel ">
 
+    @foreach($projects as $project)
     <div>
         <div class="serv-section-2">
             <div class="serv-section-2-icon"></div>
             <div class="serv-section-desc">
-              <a href="portfolio/portfolio1.html"> <h6 style="color:darkcyan">Installing and commissioning of Ncell ADSS
-                Project</h6></a>
+              <a href="portfolio/{{$project->id}}"> <h6 style="color:darkcyan">{{$project->name}}</h6></a>
                   <div class="section-heading-line-left"></div>
-                    <p> Client - Ncell Pvt. Ltd.</p>
-                    <p>Area - Bharatpur, Tandi, Sauraha
-                      and Hetauda</p>
-                    <p>Year - October 2015</p>     
+                    <p>Client - {{$project->client->name}}</p>
+                    <p>Area - {{$project->area}}</p>
+                    <p>Year - {{$project->year}}</p>
+                    
         </div>
       </div>
-  </div>
+    </div>
+    @endforeach
+</div>
+</div>
+<br><br>
+
+
+
+
+
 
 @endsection

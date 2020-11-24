@@ -11,6 +11,7 @@ use App\Models\Slider;
 use App\Models\Mission;
 use App\Models\Project;
 use App\Models\Service;
+use App\Models\CaseStudy;
 use App\Models\BoardMember;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -28,8 +29,9 @@ class MainController extends Controller
         $about=About::all();
         $whyWes=WhyWe::all();
         $clients=Client::all();
+        $projects=Project::all();
 
-        return view('frontend.index',compact('sliders','about','services','whyWes','clients'));
+        return view('frontend.index',compact('sliders','about','services','whyWes','clients','projects'));
     }
 
     public function about(){
@@ -44,7 +46,8 @@ class MainController extends Controller
     }
 
     public function case_study(){
-        return view('frontend.case_study.index');
+        $cases= CaseStudy::all();
+        return view('frontend.case_study.index',compact('cases'));
     }
     public function services(){
         $services= Service::all();
@@ -61,6 +64,8 @@ class MainController extends Controller
         $newses= News::all();
         return view('frontend.news.index',compact('newses'));
     }
+
+    
 
     public function portfolio(){
         $whyWes=WhyWe::all();
@@ -88,6 +93,13 @@ class MainController extends Controller
 
         $news=News::find($id);
         return view('frontend.news.details',compact('news'));
+
+    }
+
+    public function showCase($id){
+
+        $case=CaseStudy::find($id);
+        return view('frontend.case_study.details',compact('case'));
 
     }
 

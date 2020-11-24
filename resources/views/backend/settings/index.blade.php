@@ -22,28 +22,20 @@
 
                 @if(helperPermission()['isAdd'])
 
-                    <div class="col-md-9" id="listing">
+                    <div class="col-md-12" id="listing">
                         @else
-                            <div class="col-md-12" id="listing">
+                            <div class="col-md-9" id="listing">
                                 @endif
                                 <div class="box box-default">
                                     <div class="box-header with-border">
                                         <h3 class="box-title">Settings</h3>
-                                        <?php
-
-                                        $permission = helperPermissionLink('','settings');
-
-                                        $allowEdit = $permission['isEdit'];
-
-                                     
-
-                                        ?>
+                                      
                                     </div>
                                     <div class="box-body">
                                         <table id="example1" class="table table-striped table-bordered table-hover table-responsive">
                                             <thead>
                                             <tr>
-                                                <th>S.N</th>
+                                            <th>S.N</th>
                                                 
                                                 <th>Logo</th>
                                                 <th>Phone</th>
@@ -53,8 +45,6 @@
                                                 <th>Youtube</th>
                                                 <th>Twitter</th>
                                                 <th>LinkedIn</th>
-                                                   
-                                            
                                                 <th>Action</th>
                                             </tr>
                                             </thead>
@@ -62,7 +52,7 @@
                                             <?php $i = 1;?>
                                             
                                                 <tr>
-                                                    <th scope=row>{{$i}}</th>
+                                                <th scope=row>{{$i}}</th>
                                                     <td><img src="{{asset('/storage/frontend/img/'.$settings[0]->logo)}}" height=50px alt="" srcset=""></td>
 
 
@@ -74,16 +64,17 @@
                                                     <td>{{$settings[0]->twitter}}</td>
                                                     <td>{{$settings[0]->linkedin}}</td>
                                                    
+                                                   
                                                     
 
                                                     <td class="text-right">
-                                                        @if($allowEdit)
+                                                     
                                                         <a href="{{route('settings.edit',[$settings[0]->id])}}"
                                                                class="text-info btn btn-xs btn-default" data-toggle="tooltip"
                                                                data-placement="top" title="Edit">
                                                                 <i class="fa fa-pencil-square-o"></i>
                                                             </a>&nbsp;
-                                                        @endif
+                                                     
 
                                                        
                                                     </td>
@@ -101,7 +92,7 @@
                                 <!-- /.box -->
                             </div>
 
-                            @if($allowEdit)
+                       
 
                                 <div class="col-md-3">
                                     @if(\Request::segment(3)=='edit')
@@ -109,7 +100,7 @@
                                     @endif
 
                                 </div>
-                            @endif
+                    
 
                     </div>
             </div>

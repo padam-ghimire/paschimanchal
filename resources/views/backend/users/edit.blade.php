@@ -46,7 +46,7 @@
             'Choose File'))}}
             {!! $errors->first('avatar_image', '<span class="text-danger">:message</span>') !!}
             @if($edits->user_image)
-            <img class="profile-user-img img-responsive img-circle" src="{{asset('storage/avatar/'.$edits->user_image)}}" style="width:150px" alt="No Image">
+            <img class="profile-user-img img-responsive img-circle" src="{{asset('/storage/uploads/users/images/profilePic/'.$edits->user_image)}}" style="width:150px" alt="No Image">
             @endif
         </div>
 

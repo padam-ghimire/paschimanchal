@@ -78,6 +78,8 @@ class UserController extends BaseController
      */
     public function store(UserAddRequest $request)
     {
+
+        // return $request;
         try {
             $password = str_random(6);
             $request['password'] = bcrypt($password);
@@ -96,10 +98,10 @@ class UserController extends BaseController
                     Storage::putFileAs('public/uploads/users/images/profilePic', $userAvatar, $userAvatarName);
                     Image::make(storage_path() . '/app/public/uploads/users/images/profilePic/' . $userAvatarName)->resize(128, 128)->save();
                 }
-                if ($user)
-                    Mail::send('backend.email.addUser', ['userName' => $request->name, 'password' => $password], function ($m) use ($request) {
-                        $m->to($request->email)->subject('User Registration Information');
-                    });
+                // if ($user)
+                //     Mail::send('backend.email.addUser', ['userName' => $request->name, 'password' => $password], function ($m) use ($request) {
+                //         $m->to($request->email)->subject('User Registration Information');
+                //     });
                 session()->flash('success', 'User Successfully Created!');
                 return back();
 
