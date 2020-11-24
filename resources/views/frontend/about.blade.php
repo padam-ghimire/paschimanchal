@@ -95,11 +95,6 @@
             </div>
             @endforeach
             <!-- ./Team member -->
-          
-          
-        
-       
-           
           </div>
     </div>
   </section>

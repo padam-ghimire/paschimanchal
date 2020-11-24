@@ -12,7 +12,6 @@
 
  <!--content ends-->
  
-
  <!--contact-->
 <div class="container">
   <div class="row">
@@ -99,9 +98,7 @@
             </p>
             <strong class="d-inline-block mb-2 text-primary">Contact Detail</strong>
             <p><i class="fas fa-phone-volume"></i><span>&NonBreakingSpace; {{$settings[0]->phone}} </span></p>
-           
           </div>
-          
         </div>
       </div>
     </div>

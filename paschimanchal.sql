@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 20, 2020 at 07:54 AM
+-- Generation Time: Nov 24, 2020 at 06:42 AM
 -- Server version: 10.4.13-MariaDB
 -- PHP Version: 7.2.31
 
@@ -58,13 +58,6 @@ CREATE TABLE `applicants` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `applicants`
---
-
-INSERT INTO `applicants` (`id`, `job_id`, `name`, `email`, `phone`, `cv`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Padam', 'maker@youngminds.com.np', '9860162702', 'cv1605857808.png', '2020-11-20 01:51:48', '2020-11-20 01:51:48');
 
 -- --------------------------------------------------------
 
@@ -173,13 +166,6 @@ CREATE TABLE `careers` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
---
--- Dumping data for table `careers`
---
-
-INSERT INTO `careers` (`id`, `title`, `working_hours`, `salary`, `description`, `short_description`, `created_at`, `updated_at`) VALUES
-(1, 'This is title newwwww', '10am-5pm', '500000', '<p>fjskl;a</p><ol><li>fghjkslk</li><li>dhslk;\'</li><li>vghj</li></ol>', 'we want prpject manager needed', '2020-11-20 00:36:39', '2020-11-20 00:39:45');
-
 -- --------------------------------------------------------
 
 --
@@ -209,13 +195,6 @@ CREATE TABLE `contacts` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `contacts`
---
-
-INSERT INTO `contacts` (`id`, `name`, `email`, `phone`, `queries`, `created_at`, `updated_at`) VALUES
-(1, 'Padam', 'maker@youngminds.com.np', '9860162702', 'THis is qu34y', '2020-11-19 23:32:13', '2020-11-19 23:32:13');
 
 -- --------------------------------------------------------
 
@@ -464,6 +443,26 @@ CREATE TABLE `login_logs` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `maps`
+--
+
+CREATE TABLE `maps` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `maps`
+--
+
+INSERT INTO `maps` (`id`, `link`, `created_at`, `updated_at`) VALUES
+(1, 'https://maps.googleapis.com/maps/api/staticmap?center=27.720823,85.364906&zoom=8&scale=2&format=png&size=800x600&visual_refresh=true&maptype=roadmap&markers=color:black%7Clabel:H%7C27.720823,85.364906&key=AIzaSyBgNBYEwytGjFVZ7vkrkrtZC0kfoxB2KRQ', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `menus`
 --
 
@@ -509,10 +508,11 @@ INSERT INTO `menus` (`id`, `parent_id`, `menu_name`, `menu_controller`, `menu_li
 (20, 14, 'Clients', 'ClientsController', '/clients', '', '<i class=\"fa fa-gears\" aria-hidden=\"true\"></i>', '1', 16, NULL, NULL, NULL),
 (21, 14, 'Projects', 'ProjectsController', '/projects', '', '<i class=\"fa fa-gears\" aria-hidden=\"true\"></i>', '1', 16, NULL, NULL, NULL),
 (22, 14, 'News and Events', 'NewsController', '/news', '', '<i class=\"fa fa-gears\" aria-hidden=\"true\"></i>', '1', 16, NULL, NULL, NULL),
-(23, 0, 'Settings', 'SettingsController', '/settings', '', '<i class=\"fa fa-gears\" aria-hidden=\"true\"></i>', '1', 16, NULL, NULL, NULL),
-(24, 0, 'Queries', 'ContactController', '/queries', '', '<i class=\"fa fa-gears\" aria-hidden=\"true\"></i>', '1', 16, NULL, NULL, NULL),
-(25, 14, 'Career', 'CareerController', '/careers', NULL, '<i class=\"fa fa-calendar-check-o\" aria-hidden=\"true\"></i>', '1', 3, NULL, NULL, NULL),
-(26, 14, 'Applicants', 'ApplicantController', '/applicants', NULL, '<i class=\"fa fa-calendar-check-o\" aria-hidden=\"true\"></i>', '1', 22, NULL, NULL, NULL);
+(23, 14, 'Map', 'MapController', '/map', '', '<i class=\"fa fa-gears\" aria-hidden=\"true\"></i>', '1', 16, NULL, NULL, NULL),
+(24, 0, 'Settings', 'SettingsController', '/settings', '', '<i class=\"fa fa-gears\" aria-hidden=\"true\"></i>', '1', 16, NULL, NULL, NULL),
+(25, 0, 'Queries', 'ContactController', '/queries', '', '<i class=\"fa fa-gears\" aria-hidden=\"true\"></i>', '1', 16, NULL, NULL, NULL),
+(26, 14, 'Career', 'CareerController', '/careers', NULL, '<i class=\"fa fa-user-circle\" aria-hidden=\"true\"></i>', '1', 22, NULL, NULL, NULL),
+(27, 14, 'Mission', 'MissionController', '/mission', NULL, '<i class=\"fa fa-user-circle\" aria-hidden=\"true\"></i>', '1', 23, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -564,8 +564,24 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (31, '2020_11_19_040330_create_news_table', 1),
 (32, '2020_11_19_101154_create_settings_table', 1),
 (33, '2020_11_20_042128_create_contacts_table', 1),
-(34, '2020_11_20_051923_create_careers_table', 2),
-(35, '2020_11_20_064639_create_applicants_table', 3);
+(34, '2020_11_20_051923_create_careers_table', 1),
+(35, '2020_11_20_064639_create_applicants_table', 1),
+(36, '2020_11_23_040529_create_maps_table', 1),
+(37, '2020_11_23_053502_create_missions_table', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `missions`
+--
+
+CREATE TABLE `missions` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -1592,7 +1608,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `designation_id`, `user_group_id`, `user_image`, `user_status`, `remember_token`, `created_at`, `updated_at`, `deleted_at`) VALUES
-(1, 'Paschimanchal', 'admin@admin.com', '$2y$10$YOU15sP/Eu22U.4Gl2LOsO5XOmVs.fhK6mRfD/lsQJwGm6oNnm/ye', 1, 1, NULL, 'active', NULL, NULL, NULL, NULL);
+(1, 'Paschimanchal', 'admin@admin.com', '$2y$10$/QA03ZQcc7lzP1RP4Ziq0utztljeTIcIpsCqzhxE0mVKrbdrygAUW', 1, 1, NULL, 'active', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1666,7 +1682,8 @@ INSERT INTO `user_roles` (`id`, `user_group_id`, `menu_id`, `allow_view`, `allow
 (23, 1, 23, '1', '1', '1', '1', NULL, NULL, NULL),
 (24, 1, 24, '1', '1', '1', '1', NULL, NULL, NULL),
 (25, 1, 25, '1', '1', '1', '1', NULL, NULL, NULL),
-(26, 1, 26, '1', '1', '1', '1', NULL, NULL, '2020-11-20 02:02:47');
+(26, 1, 26, '1', '1', '1', '1', NULL, NULL, '2020-11-24 00:55:42'),
+(27, 1, 27, '1', '1', '1', '1', NULL, NULL, '2020-11-24 00:56:37');
 
 -- --------------------------------------------------------
 
@@ -1796,6 +1813,12 @@ ALTER TABLE `login_logs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `maps`
+--
+ALTER TABLE `maps`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `menus`
 --
 ALTER TABLE `menus`
@@ -1805,6 +1828,12 @@ ALTER TABLE `menus`
 -- Indexes for table `migrations`
 --
 ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `missions`
+--
+ALTER TABLE `missions`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1932,7 +1961,7 @@ ALTER TABLE `abouts`
 -- AUTO_INCREMENT for table `applicants`
 --
 ALTER TABLE `applicants`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `applications`
@@ -1962,7 +1991,7 @@ ALTER TABLE `board_members`
 -- AUTO_INCREMENT for table `careers`
 --
 ALTER TABLE `careers`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `clients`
@@ -1974,7 +2003,7 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT for table `contacts`
 --
 ALTER TABLE `contacts`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `countries`
@@ -2025,16 +2054,28 @@ ALTER TABLE `login_logs`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `maps`
+--
+ALTER TABLE `maps`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT for table `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+
+--
+-- AUTO_INCREMENT for table `missions`
+--
+ALTER TABLE `missions`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `municipalities`
@@ -2124,7 +2165,7 @@ ALTER TABLE `user_groups`
 -- AUTO_INCREMENT for table `user_roles`
 --
 ALTER TABLE `user_roles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT for table `why_wes`

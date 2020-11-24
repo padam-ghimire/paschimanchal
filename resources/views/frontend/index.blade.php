@@ -227,5 +227,22 @@
 <br><br>
 <br><br>
 
+<div class="container">
+  <div class="owl-carousel owl-theme port">
+
+    <div>
+        <div class="serv-section-2">
+            <div class="serv-section-2-icon"></div>
+            <div class="serv-section-desc">
+              <a href="portfolio/portfolio1.html"> <h6 style="color:darkcyan">Installing and commissioning of Ncell ADSS
+                Project</h6></a>
+                  <div class="section-heading-line-left"></div>
+                    <p> Client - Ncell Pvt. Ltd.</p>
+                    <p>Area - Bharatpur, Tandi, Sauraha
+                      and Hetauda</p>
+                    <p>Year - October 2015</p>     
+        </div>
+      </div>
+  </div>
 
 @endsection
