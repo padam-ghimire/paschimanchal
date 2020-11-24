@@ -82,6 +82,12 @@
               <li class="nav-item ">
                 <div style="width:20px;"></div>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link" href="/jobs">Career</a>
+              </li>
+              <li class="nav-item ">
+                <div style="width:20px;"></div>
+                </li>
                 
             <li class="nav-item">
               <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
