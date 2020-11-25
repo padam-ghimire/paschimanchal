@@ -49,7 +49,7 @@ class MainController extends Controller
 
     public function case_study(){
         $cases= CaseStudy::all();
-        return view('frontend.case_study.index',compact('cases','districts'));
+        return view('frontend.case_study.index',compact('cases'));
     }
     public function services(){
         $services= Service::all();
