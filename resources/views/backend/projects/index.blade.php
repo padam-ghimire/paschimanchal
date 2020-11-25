@@ -1,6 +1,15 @@
 @extends('backend.layouts.app')
 @section('content')
+<?php
 
+$permission = helperPermissionLink('projects', 'projects');
+
+$allowEdit = $permission['isEdit'];
+
+$allowDelete = $permission['isDelete'];
+
+$allowAdd = $permission['isAdd'];
+?>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -22,6 +31,18 @@
 
                 @if(helperPermission()['isAdd'])
 
+                @if($allowAdd)
+
+                <div class="col-md-12">
+                    @if(\Request::segment(3)=='edit')
+                        @include('backend.projects.edit')
+                    @else
+                        @include('backend.projects.add')
+                    @endif
+
+                </div>
+                <br><br>
+                @endif
                     <div class="col-md-12" id="listing">
                         @else
                             <div class="col-md-12" id="listing">
@@ -29,16 +50,7 @@
                                 <div class="box box-default">
                                     <div class="box-header with-border">
                                         <h3 class="box-title">Project</h3>
-                                        <?php
-
-                                        $permission = helperPermissionLink('projects', 'projects');
-
-                                        $allowEdit = $permission['isEdit'];
-
-                                        $allowDelete = $permission['isDelete'];
-
-                                        $allowAdd = $permission['isAdd'];
-                                        ?>
+                                       
                                     </div>
                                     <div class="box-body">
                                         <table id="example1" class="table table-striped table-bordered table-hover table-responsive">
@@ -125,17 +137,6 @@
                                 <!-- /.box -->
                             </div>
 
-                            @if($allowAdd)
-
-                                <div class="col-md-3">
-                                    @if(\Request::segment(3)=='edit')
-                                        @include('backend.projects.edit')
-                                    @else
-                                        @include('backend.projects.add')
-                                    @endif
-
-                                </div>
-                            @endif
 
                     </div>
             </div>

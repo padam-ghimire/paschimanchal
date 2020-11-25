@@ -21,7 +21,12 @@
             <div class="row">
 
                 @if(helperPermission()['isAdd'])
+                <div class="col-md-12">
+                                    @if(\Request::segment(3)=='edit')
+                                        @include('backend.about.edit')
+                                    @endif
 
+                                </div>
                     <div class="col-md-12" id="listing">
                         @else
                             <div class="col-md-12" id="listing">
@@ -82,12 +87,7 @@
 
                          
 
-                                <div class="col-md-3">
-                                    @if(\Request::segment(3)=='edit')
-                                        @include('backend.about.edit')
-                                    @endif
-
-                                </div>
+                      
                        
 
                     </div>
