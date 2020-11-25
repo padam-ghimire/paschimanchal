@@ -1,15 +1,6 @@
 @extends('backend.layouts.app')
 @section('content')
-<?php
 
-$permission = helperPermissionLink('case_study', 'case_study');
-
-$allowEdit = $permission['isEdit'];
-
-$allowDelete = $permission['isDelete'];
-
-$allowAdd = $permission['isAdd'];
-?>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -28,7 +19,16 @@ $allowAdd = $permission['isAdd'];
             @include('backend.message.flash')
 
             <div class="row">
+            <?php
 
+                    $permission = helperPermissionLink('case_study', 'case_study');
+
+                    $allowEdit = $permission['isEdit'];
+
+                    $allowDelete = $permission['isDelete'];
+
+                    $allowAdd = $permission['isAdd'];
+                    ?>
                 @if(helperPermission()['isAdd'])
                 @if($allowAdd)
 
