@@ -16,6 +16,7 @@ use App\Models\BoardMember;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Repository\ServicesRepository;
+use App\Models\Configurations\District;
 
 class MainController extends Controller
 {
@@ -42,12 +43,13 @@ class MainController extends Controller
     }
 
     public function contact(){
-        return view('frontend.contact');
+        $districts= District::all();
+        return view('frontend.contact',compact('districts'));
     }
 
     public function case_study(){
         $cases= CaseStudy::all();
-        return view('frontend.case_study.index',compact('cases'));
+        return view('frontend.case_study.index',compact('cases','districts'));
     }
     public function services(){
         $services= Service::all();

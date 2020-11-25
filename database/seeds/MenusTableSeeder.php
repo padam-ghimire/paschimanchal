@@ -130,7 +130,47 @@ class MenusTableSeeder extends Seeder
                 'menu_order' => '9'
             ],
           
-         
+            [
+                'parent_id' => '3',
+                'menu_name' => 'State',
+                'menu_link' => '/configurations/pradesh',
+                'menu_controller' => 'PradeshController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-map-marker" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '10'
+            ],
+            [
+                'parent_id' => '3',
+                'menu_name' => 'Municipilitey Type',
+                'menu_link' => '/configurations/muniType',
+                'menu_controller' => 'MuniTypeController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-map-signs" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '11'
+            ],
+            [
+                'parent_id' => '3',
+                'menu_name' => 'District',
+                'menu_link' => '/configurations/district',
+                'menu_controller' => 'DistrictController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-map-pin" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '13'
+            ],
+            [
+                'parent_id' => '3',
+                'menu_name' => 'Municiplilities',
+                'menu_link' => '/configurations/municipality',
+                'menu_controller' => 'MunicipalityController',
+                'menu_css' => '',
+                'menu_icon' => '<i class="fa fa-map" aria-hidden="true"></i>',
+                'menu_status' => '1',
+                'menu_order' => '13'
+
+            ],
          
           
             [

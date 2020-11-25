@@ -74,6 +74,13 @@
 
         <!-- /.input group -->
         </div>
+        <div class="form-group {{ ($errors->has('image'))?'has-error':'' }}">
+            <label for="avatar_image" class="control-label align">Project Image </label>
+            {{Form::file('image',null,array('class'=>'form-control','id'=>'image','placeholder'=>
+            'Choose File'))}}
+            <span class="help-block inline">Upload Type: JPG, JPEG, PNG</span><br>
+            {!! $errors->first('image', '<span class="text-danger">:message</span>') !!}
+        </div>
         <!-- /.form group -->
         <div class="box-footer">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">

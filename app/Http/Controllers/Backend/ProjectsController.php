@@ -7,7 +7,9 @@ use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\ProjectRequest;
+use Intervention\Image\Facades\Image;
 use App\Repository\ProjectsRepository;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\BaseController;
 
 class ProjectsController extends BaseController
@@ -62,17 +64,30 @@ class ProjectsController extends BaseController
      */
     public function store(ProjectRequest $request)
     {
-        // return $request->file('image');
         try {
             
             $value= $request->all();
+ 
+             if (!empty($request->file('image'))) {
+                 $projectImage = $request->file('image');
+                 $imageExtension = $projectImage->getClientOriginalExtension();
+                 $imageName = 'project' . time() . '.' . strtolower($imageExtension);
+               
+                 $value['image'] = $imageName;
+                 $projectImageSuccess = true;
+             }
+ 
              $project = Project::create($value);
              if ($project) {
-            
+                 if (isset($projectImageSuccess)) {
+                     Storage::putFileAs('public/uploads/images/projects', $projectImage, $imageName);
+                     Image::make(storage_path() . '/app/public/uploads/images/projects/' . $imageName)->resize(700, 540)->save();
                      session()->flash('success', 'Project Successfully Created!');
                      return back();
+                 }
                
-               
+                
+ 
              } else {
                  session()->flash('success', 'Project could not be Create!');
                  return back();
@@ -134,35 +149,46 @@ class ProjectsController extends BaseController
      */
     public function update(ProjectRequest $request, $id)
     {
+        // return $request;
         $id = (int)$id;
-         try {
-             $value= $request->all();
- 
-             $project = $this->projectsRepository->findById($id);
-          
- 
-             if ($project) {
-              
-                 $update = $project->fill($value)->save();
-                 if ($update) {
-                   
- 
-                     session()->flash('success', 'Project Successfully updated!');
-                     return redirect(route('projects.index'));
-                 } else {
-                     session()->flash('error', 'Project could not be update!');
-                     return back();
-                 }
-             }
- 
-         } catch (\Exception $e) {
-             $exception = $e->getMessage();
-             session()->flash('error', 'EXCEPTION:' . $exception);
-             return back();
-         }
-    }
+        try {
+            $value= $request->all();
 
-    /**
+            $project = $this->projectsRepository->findById($id);
+            $oldValue = $this->projectsRepository->findById($id);
+
+            if ($project) {
+                if (!empty($request->file('image'))) {
+                    $projectImage = $request->file('image');
+                    $imageExtension = $projectImage->getClientOriginalExtension();
+                    $imageName = 'news' . time() . '.' . strtolower($imageExtension);
+                    $value['image'] = $imageName;
+                    $newsImageSuccess = true;
+                }
+                $update = $news->fill($value)->save();
+                if ($update) {
+                    if (isset($newsImageSuccess)) {
+                        if ($oldValue->image != null)
+                            @unlink(storage_path() . 'public/uploads/images/projects' . $oldValue->image);
+                            Storage::putFileAs('public/uploads/images/projects', $projectImage, $imageName);
+                            Image::make(storage_path() . '/app/public/uploads/images/projects/' . $imageName)->save();
+                    }
+
+                    session()->flash('success', 'Project Successfully updated!');
+                    return redirect(route('clients.index'));
+                } else {
+                    session()->flash('error', 'Project could not be update!');
+                    return back();
+                }
+            }
+
+        } catch (\Exception $e) {
+            $exception = $e->getMessage();
+            session()->flash('error', 'EXCEPTION:' . $exception);
+            return back();
+        }
+    }
+     /**
      * Remove the specified resource from storage.
      *
      * @param  int  $id
@@ -170,10 +196,10 @@ class ProjectsController extends BaseController
      */
     public function destroy($id)
     {
-         
+           
         $id=(int)$id;
         try{
-            $value = $this->projectRepository->findById($id);
+            $value = $this->projectsRepository->findById($id);
             $value->delete();
             session()->flash('success','Project successfully deleted!');
             return back();

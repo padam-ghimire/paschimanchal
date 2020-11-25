@@ -126,14 +126,14 @@
         <div class="col p-4 d-flex flex-column position-static">
           <strong class="d-inline-block mb-2 text-primary">Head Office</strong>
           <p class="card-text mb-auto">
-              Gairaptan, Pokhara,Kaski, Nepal
+             {{$settings[0]->address}}
               <br><br>
           </p>
           <strong class="d-inline-block mb-2 text-primary">Contact Detail</strong>
-          <p><i class="fas fa-phone-volume"></i><span>&NonBreakingSpace; +977-061-525629, 537220 </span></p>
-          <p><i class="fas fa-fax"></i><span>&NonBreakingSpace; +977-061-537219</span></p>
-          <p><a href=""><i class="fas fa-envelope"></i></i><span>&NonBreakingSpace; business@paschimanchal.net</span></a></p>
-          <p><a href=""><i class="fab fa-google"></i></i><span>&NonBreakingSpace; paschimanchalsolution@gmail.com</span></p></a>
+          <p><i class="fas fa-phone-volume"></i><span>&NonBreakingSpace; {{$settings[0]->phone}}/</span></p>
+
+          <p><a href=""><i class="fas fa-envelope"></i></i><span>&NonBreakingSpace;{{$settings[0]->email}}</span></a></p>
+     
           <p><a href="http://www.paschimanchl.net/"><i class="fab fa-internet-explorer"></i></i><span>&NonBreakingSpace; http://www.paschimanchl.net/</span></p></a>
           
         </div>
@@ -144,68 +144,18 @@
       <ul class="list-group">
         <li class="list-group-item d-flex justify-content-between align-items-center ">
          Team Location
-          <span class="">No Of Staffs</span>
+       
         </li>
+        @foreach($districts as $district)
         <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Gajuri
-          <span class="badge badge-primary badge-pill">10</span>
+          {{$district->english_name}}
+        
         </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Dhunche
-          <span class="badge badge-primary badge-pill">15</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Nakhu
-          <span class="badge badge-primary badge-pill">12</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Dhumbarai
-          <span class="badge badge-primary badge-pill">20</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Sindhuli
-          <span class="badge badge-primary badge-pill">14</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Itahari
-          <span class="badge badge-primary badge-pill">17</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Surunga
-          <span class="badge badge-primary badge-pill">15</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Mustang
-          <span class="badge badge-primary badge-pill">10</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Bharatpur
-          <span class="badge badge-primary badge-pill">19</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Birjung
-          <span class="badge badge-primary badge-pill">11</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Butwal
-          <span class="badge badge-primary badge-pill">18</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Nepaljung
-          <span class="badge badge-primary badge-pill">22</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Attariya
-          <span class="badge badge-primary badge-pill">14</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center border-bottom-0">
-          Dang
-          <span class="badge badge-primary badge-pill">16</span>
-        </li>
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          Bardibas
-          <span class="badge badge-primary badge-pill">12</span>
-        </li>
+        @endforeach
+      
+       
+      
+       
       </ul>
   </div>
 

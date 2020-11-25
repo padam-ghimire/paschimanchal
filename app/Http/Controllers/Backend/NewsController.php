@@ -193,6 +193,19 @@ class NewsController extends BaseController
      */
     public function destroy($id)
     {
-        //
+           
+        $id=(int)$id;
+        try{
+            $value = $this->newsRepository->findById($id);
+            $value->delete();
+            session()->flash('success','News successfully deleted!');
+            return back();
+
+        }catch (\Exception $e){
+            $exception=$e->getMessage();
+            session()->flash('error','EXCEPTION'.$exception);
+            return back();
+
+        }
     }
 }

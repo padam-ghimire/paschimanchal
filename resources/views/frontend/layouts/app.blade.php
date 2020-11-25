@@ -214,10 +214,9 @@
                               <a href="news.html"><h4>News</h4></a>
                               
                             </div>
-                            <p><a href="news/newsdetail1.html" class="footernews">Telecommunication Advancement</a></p>
-                            <p><a href="news/newsdetail2.html" class="footernews">Our ADDS Installation Service</a></p>
-                            <p><a href="news/newsdetail3.html" class="footernews">We Build Relationship</a></p>
-                            <p><a href="news/newsdetail4.html" class="footernews">Fast Growing Fiber Services</a></p>
+                            @foreach($news as $new)
+                            <p><a href="news_events/{{$new->id}}" class="footernews">{{$new->title}}</a></p>
+                           @endforeach
                             
                       </div>
                       <!-- End footer widget -->

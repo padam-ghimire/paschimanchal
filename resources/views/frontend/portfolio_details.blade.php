@@ -20,7 +20,7 @@
       <div class="col-lg-2"></div>
       <div class="col-lg-8">
           <div class="card" >
-              <!-- <img src="../img/project.jpg" class="card-img-top" alt="..."> -->
+              <img src="{{asset('storage/uploads/images/projects')}}/{{$portfolio->image}}" class="card-img-top" alt="...">
               <br>
               <div class="card-body">
                 <table>

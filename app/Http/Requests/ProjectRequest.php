@@ -27,6 +27,7 @@ class ProjectRequest extends FormRequest
             'name'=>'required',
             'client_id'=>'required',
             'area'=>'required',
+            'image'=>'required',
             'description'=>'required',
             'year'=>'required',
           
