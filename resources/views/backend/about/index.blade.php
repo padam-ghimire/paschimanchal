@@ -22,7 +22,7 @@
 
                 @if(helperPermission()['isAdd'])
 
-                    <div class="col-md-9" id="listing">
+                    <div class="col-md-12" id="listing">
                         @else
                             <div class="col-md-12" id="listing">
                                 @endif

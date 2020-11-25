@@ -24,7 +24,7 @@
 
                     <div class="col-md-12" id="listing">
                         @else
-                            <div class="col-md-9" id="listing">
+                            <div class="col-md-12" id="listing">
                                 @endif
                                 <div class="box box-default">
                                     <div class="box-header with-border">
