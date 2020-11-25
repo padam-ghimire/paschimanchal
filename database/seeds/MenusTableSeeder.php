@@ -205,7 +205,7 @@ class MenusTableSeeder extends Seeder
                 'menu_order' => '20'
             ],
             [
-                'parent_id' => '14',
+                'parent_id' => '18',
                 'menu_name' => 'Slider',
                 'menu_link' => '/slider',
                 'menu_controller' => 'SliderController',
@@ -216,7 +216,7 @@ class MenusTableSeeder extends Seeder
             ],
 
             [
-                'parent_id' => '14',
+                'parent_id' => '18',
                 'menu_name' => 'About',
                 'menu_link' => '/about_us',
                 'menu_controller' => 'AboutController',
@@ -238,7 +238,7 @@ class MenusTableSeeder extends Seeder
             ],
 
             [
-                'parent_id' => '14',
+                'parent_id' => '18',
                 'menu_name' => 'Services',
                 'menu_link' => '/services',
                 'menu_controller' => 'ServicesController',
@@ -249,7 +249,7 @@ class MenusTableSeeder extends Seeder
             ],
 
             [
-                'parent_id' => '14',
+                'parent_id' => '18',
                 'menu_name' => 'Why we?',
                 'menu_link' => '/whyWe',
                 'menu_controller' => 'WhyWeController',
@@ -259,7 +259,7 @@ class MenusTableSeeder extends Seeder
                 'menu_order' => '15'
             ],
             [
-                'parent_id' => '14',
+                'parent_id' => '18',
                 'menu_name' => 'Clients',
                 'menu_link' => '/clients',
                 'menu_controller' => 'ClientsController',
@@ -269,7 +269,7 @@ class MenusTableSeeder extends Seeder
                 'menu_order' => '16'
             ],
             [
-                'parent_id' => '14',
+                'parent_id' => '18',
                 'menu_name' => 'Projects',
                 'menu_link' => '/projects',
                 'menu_controller' => 'ProjectsController',
@@ -279,7 +279,7 @@ class MenusTableSeeder extends Seeder
                 'menu_order' => '16'
             ],
             [
-                'parent_id' => '14',
+                'parent_id' => '18',
                 'menu_name' => 'News and Events',
                 'menu_link' => '/news',
                 'menu_controller' => 'NewsController',
@@ -289,7 +289,7 @@ class MenusTableSeeder extends Seeder
                 'menu_order' => '16'
             ],
             [
-                'parent_id' => '14',
+                'parent_id' => '18',
                 'menu_name' => 'Map',
                 'menu_link' => '/map',
                 'menu_controller' => 'MapController',
