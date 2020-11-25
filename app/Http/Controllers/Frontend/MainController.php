@@ -111,7 +111,8 @@ class MainController extends Controller
         return view('frontend.portfolio_details',compact('portfolio'));
 
     }
-    public function apply($id){
+    public function apply(Request $request,$id){
+
 
         try {
             
