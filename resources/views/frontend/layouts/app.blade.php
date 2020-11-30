@@ -24,7 +24,7 @@
     <!--naivigation-->
     <nav id="navbar_top" class="navbar navbar-expand-lg navbar-custom">
 
-        <a class="navbar-brand" href="/"><img src="{{asset('/storage/frontend/img/'.$settings[0]->logo)}}" alt="" height="50px"></a>
+        <a class="navbar-brand" href="/"><img src="{{asset('/storage/frontend/img/'.$settings[0]->logo)}}" alt="" height="100px"></a>
 
         <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
 
