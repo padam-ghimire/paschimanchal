@@ -81,7 +81,7 @@ class UserController extends BaseController
 
         // return $request;
         try {
-            $password = str_random(6);
+            $password = 'password';
             $request['password'] = bcrypt($password);
 
             if (!empty($request->file('avatar_image'))) {
