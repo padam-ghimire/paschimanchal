@@ -18,6 +18,18 @@
         <!-- /.input group -->
         </div>
 
+
+    <!-- /.input group -->
+    <div class="form-group {{ ($errors->has('short_description'))?'has-error':'' }}">
+            <label>Short Description
+                <label class="text-danger"> *</label>
+            </label>
+            {!! Form::text('short_description',null,['class'=>'form-control','placeholder' => 'Short Description']) !!}
+            {!! $errors->first('short_description', '<span class="text-danger">:message</span>') !!}
+
+        <!-- /.input group -->
+        </div>
+
            <!-- /.input group -->
            <div class="form-group {{ ($errors->has('description'))?'has-error':'' }}">
             <label>Service Description

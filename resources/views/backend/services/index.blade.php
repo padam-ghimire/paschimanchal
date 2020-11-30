@@ -66,6 +66,7 @@ $allowAdd = $permission['isAdd'];
                                                 <th style="width: 10px;">S.N</th>
                                                 <th>Title</th>
                                                 <th>Description</th>
+                                                <th>Short Desc</th>
                                                 <th >Image</th>
 
                                                 <th>Design</th>
@@ -84,6 +85,7 @@ $allowAdd = $permission['isAdd'];
                                                 <tr>
                                                     <th scope=row>{{$i}}</th>
                                                     <td>{{$service->title}}</td>
+                                                    <td>{{$service->short_description}}</td>
                                                     <td>{!! $service->description !!}</td>
                                                     <td><img src="{{asset('/storage/uploads/images/services/'.$service->image)}}" height=100px alt="" srcset=""></td>
                                                     <td>{{$service->design}}</td>
