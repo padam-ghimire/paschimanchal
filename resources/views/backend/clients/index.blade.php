@@ -1,15 +1,6 @@
 @extends('backend.layouts.app')
 @section('content')
-<?php
 
-$permission = helperPermissionLink('clients', 'clients');
-
-$allowEdit = $permission['isEdit'];
-
-$allowDelete = $permission['isDelete'];
-
-$allowAdd = $permission['isAdd'];
-?>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
