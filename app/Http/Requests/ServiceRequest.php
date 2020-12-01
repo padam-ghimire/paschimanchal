@@ -25,7 +25,7 @@ class ServiceRequest extends FormRequest
     {
         return [
             'title'=>'required',
-            'title'=>'short_description',
+            'short_description'=>'required',
             'description'=>'required',
             'design'=>'required',
             'deployment'=>'required',
