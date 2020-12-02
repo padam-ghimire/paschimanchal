@@ -20,7 +20,7 @@
           <h5 class="mb-0">{{$news->title}}</h5>
           <div class="mb-1 text-muted">{{$news->created_at->diffForHumans()}}
 
-</div>
+             </div>
           <br>
           <a href="{{route('new_events.show',[$news->id])}}"><div class="btn btn-sm btn-primary">Read More</div></a>
         </div>
