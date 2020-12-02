@@ -1,13 +1,13 @@
 @extends('frontend.layouts.app')
 @section('content')
-  <div class="jumbotron  text-white bg-dark" style="background-image: url(img/about-us.jpg); background-size: cover;">
-    <div class="col-md-6 px-0">
-      <h2 class="display">{{$about[0]->title}}</h2>
-      <p class=" my-3">Leading Optical Fiber Networking And Engineering Services.
-        </p>
-    </div>
-  </div>
 
+<div class="jumbotron  text-white bg-dark" style="background-image: url(img/contactus.png); background-size: cover;">
+    
+  <h2 class="display">{{$about[0]->title}}</h2>
+  <p class=" my-3">Leading Optical Fiber Networking And Engineering Services.
+    </p>
+
+</div>
 
   <section class="text-center">
     <div class="container">
