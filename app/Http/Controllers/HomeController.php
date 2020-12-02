@@ -32,6 +32,9 @@ class HomeController extends BaseController
 
         $services= count(Service::all());
         $queries= count(Contact::all());
+
+
+        
         $news= count(News::all());
         $sliders= count(Slider::all());
         $missions= count(Mission::all());
@@ -39,7 +42,7 @@ class HomeController extends BaseController
         $clients= count(Client::all());
         $whyWes= count(WhyWe::all());
         $boardMembers= count(BoardMember::all());
-        // return $service;
+        // return $news;
 
         return view('backend.dashboard',compact('services','queries','news','sliders','missions','projects','clients','whyWes','boardMembers'));
     }
