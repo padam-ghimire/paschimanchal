@@ -40,7 +40,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text"><a href="/news" style="color:#0a0a0a; ">TOTAL NEWS</a></span>
-                            <span class="info-box-number">{{$news}}</span>
+                            <span class="info-box-number">{{$news->count()}}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
