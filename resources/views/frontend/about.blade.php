@@ -9,14 +9,7 @@
 
 </div>
 
-  <section class="text-center">
-    <div class="container">
-      <h3 style="color:#34495E;text-align: center;">{{$about[0]->title}}</span></h3>
-        <hr>
-        <br><br>
-      <p class="text-muted">{{$about[0]->description}}</p>
-    </div>
-  </section>
+ 
 
   <hr class="featurette-divider my-4">
     <div class="container">

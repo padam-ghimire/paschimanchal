@@ -8,14 +8,6 @@
  
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <h3 style="color:#34495E;text-align: center;">Available <span style="color:darkcyan;">Jobs</span></h3>
-      <hr>
-    </div>
-  </div>
-
   <div class="row">
 
  

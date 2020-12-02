@@ -4,19 +4,14 @@
 <div class="portfoliopage">
     <div class="jumbotron  text-white bg-dark" style="background-image: url(img/portfolio.jpg); background-size: cover;">
       
-        <h2 class="display">Portfolio</h2>
+        <h2 class="display">Completed And Undergoing Projects</h2>
         <p class=" my-3">We believe that fundamental honesty is the
           keystone of any successful business.
           </p>
       
     </div>
 
-  
 
- <div class="col-xl-6 mx-auto text-center">
-  <h3 style="color:#34495E;text-align: center;">Completed And <span style="color:darkcyan;">Undergoing</span> Projects</h3>
-  <hr>
-</div>
 
 <div class="section-block-grey">
   <div class="container">
