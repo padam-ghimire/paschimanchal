@@ -21,7 +21,6 @@
           <div class="mb-1 text-muted">{{$news->created_at->diffForHumans()}}
 
 </div>
-          <p class="card-text mb-auto">{!! Illuminate\Support\Str::limit($news->description, 50) !!} </p>
           <br>
           <a href="{{route('new_events.show',[$news->id])}}"><div class="btn btn-sm btn-primary">Read More</div></a>
         </div>
