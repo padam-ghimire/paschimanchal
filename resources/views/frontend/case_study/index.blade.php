@@ -1,12 +1,12 @@
 @extends('frontend.layouts.app')
 @section('content')
-  <div class="jumbotron  text-white bg-dark" style="background-image: url(img/case.jpg); background-size: cover;">
-    <div class="col-md-6 px-0">
-      <h2 class="display">Case Study</h2>
-      <p class=" my-3">Know us from what we have to say.
-        </p>
-    </div>
-  </div>
+<div class="jumbotron  text-white bg-dark" style="background-image: url(img/contactus.png); background-size: cover;">
+    
+  <h2 class="display">Case Study</h2>
+  <p class=" my-3">Case Study On Different Evolving Technologies.
+    </p>
+
+</div>
   
   <div class="container">
     
@@ -25,12 +25,10 @@
         <img src="{{asset('storage/uploads/images/case_study')}}/{{$case->image}}" alt="" width="200" style="min-height:200px;" class="img-fluid">          
       </div>
       </div>
+      
     @endforeach
+
       </div>
-    
-
-
-
     </div>
 
 @endsection

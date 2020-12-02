@@ -46,7 +46,7 @@
                             <p><small>Before we implement our plans we design the required workflow for the given project. </small></p>
                         </div>
                     </div>
-                    <div class="process-line-l"></div>
+                 
                 </div>
             </div>
             <div class="col-md-2"></div>
@@ -75,7 +75,7 @@
                             <p><small>After designing the workflow we deploy it targetiing the success of our project. </small></p>
                         </div>
                     </div>
-                    <div class="process-line-r"></div>
+                  
                 </div>
             </div>
 
@@ -96,7 +96,7 @@
                             <p><small>Testing is the major component of our workflow we test our product before delivering it.</small></p>
                         </div>
                     </div>
-                    <div class="process-line-l"></div>
+                   
                 </div>
             </div>
             <div class="col-md-2"></div>
@@ -124,7 +124,7 @@
                             <p><small>After the completion of project we support the enhancement of the project.</small></p>
                         </div>
                     </div>
-                    <div class="process-line-r"></div>
+                  
                 </div>
             </div>
             

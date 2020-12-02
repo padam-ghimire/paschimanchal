@@ -105,7 +105,7 @@ ul.navbar-nav > li > a {
 
  
  
-.carousel { height: calc(100vh - 100px);}
+.carousel { height: calc(100vh - 150px);}
 .carousel-inner,.carousel-item { height: 100%;}
 .carousel-item { background-color: #000;}
 .carousel-item img { height: 100%; object-fit: cover; object-position: center;}
@@ -963,7 +963,7 @@ text-align: center;
 }
 .formsty
 {
-  height:450px;
+  height:520px;
   padding:20px;
   outline: 4px ridge rgba(28,110,164,0.08);
 outline-offset: 0px;

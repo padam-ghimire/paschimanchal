@@ -65,14 +65,7 @@
 </div>		
 </div>
 </div>
-<section class="jumbotron text-center my-4 ">
-<div class="container">
-  <h3 class="jumbotron-heading">Contact Us</h3>
-  <p class="">You can contact us by visiting directly to us also you can contact us by leaving us a message of appreciation</p>
-  <p>
-  </p>
-</div>
-</section>
+
 
 
 <!--contact-->
@@ -97,11 +90,11 @@
             {!! Form::text('email',null,['class'=>'form-control','placeholder' => 'email']) !!}
             {!! $errors->first('email', '<span class="text-danger">:message</span>') !!}
     </div>
-    <div class="form-group">
+    <div class="form-group" style="height:100px;">
     <label>Message
                 <label class="text-danger"> *</label>
             </label>
-            {!! Form::textarea('queries',null,['class'=>'','placeholder' => 'Message']) !!}
+            {!! Form::textarea('queries',null,['class'=>'form-control','placeholder' => 'Message']) !!}
             {!! $errors->first('queries', '<span class="text-danger">:message</span>') !!}
     </div>
     
@@ -116,7 +109,7 @@
 
 </div>
 </div>
-</Br></div>
+</br></div>
 
 <hr class="featurette-divider my-4">
   <div class="container">

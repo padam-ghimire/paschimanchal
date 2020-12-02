@@ -2,13 +2,13 @@
 @section('content')
 
  
-<div class="jumbotron  text-white bg-dark" style="background-image: url(img/services.jpg); background-size: cover;">
-    <div class="col-md-6 px-0">
-      <h2 class="display">Services</h2>
-      <p class=" my-3">We Provide The Best Of Services With Our Dedicated Team.
-        </p>
-    </div>
-  </div>
+<div class="jumbotron  text-white bg-dark" style="background-image: url(img/contactus.png); background-size: cover;">
+    
+  <h2 class="display">Services</h2>
+  <p class=" my-3">We Provide Leading Services In Communication.
+    </p>
+
+</div>
 
   <section class="services pt-50 pb-50" id="services">
     <div class="container">
