@@ -12,10 +12,6 @@
 
   <section class="services pt-50 pb-50" id="services">
     <div class="container">
-        <h3 style="color:#34495E;text-align: center;">We Are <span style="color:darkcyan;">Good</span>  At</h3>
-        <hr>
-        <br><br>
-     
        <div class="row">
           <div class="col-lg-4 col-md-6">
              <!-- Single Service -->

@@ -2,13 +2,13 @@
 @section('content')
 
 
-<div class="jumbotron  text-white bg-dark" style="background-image: url(../img/case.jpg); background-size: cover;">
-   
-      <h2 class="display">Case Study</h2>
-      <p class=" my-3">Know us from what we have to say.
-        </p>
-   
-  </div>
+<div class="jumbotron  text-white bg-dark" style="background-image: url(img/contactus.png); background-size: cover;">
+    
+  <h2 class="display">Case Study</h2>
+  <p class=" my-3">Case Study On Different Evolving Technologies.
+    </p>
+
+</div>
       <br><br><br>
        <!--Details start Here-->
     <div class="row">

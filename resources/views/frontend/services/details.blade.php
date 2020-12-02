@@ -4,16 +4,18 @@
 
 
 
-<div class="jumbotron  text-white bg-dark" style="background-image: url(img/services.jpg); background-size: cover;">
-    <div class="col-md-6 px-0">
-      <h2 class="display">Services</h2>
-      <p class=" my-3">We Provide The Best Of Services With Our Dedicated Team.
-        </p>
-    </div>
-  </div>
+<div class="jumbotron  text-white bg-dark" style="background-image: url(img/contactus.png); background-size: cover;">
+    
+  <h2 class="display">Services</h2>
+  <p class=" my-3">We Provide Leading Services In Communication.
+    </p>
+
+</div>
+
       <br><br><br>
   <div class="container">
     <div class="row ">
+      <div class="col-md-3"></div>
         <div class="col-md-7">
           <h4 class="" style="text-align: center;">{{$service->title}}</h4>
           <br>

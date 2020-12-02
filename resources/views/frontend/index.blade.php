@@ -194,7 +194,7 @@
                 <div class="content shadow-lg "> <a href="/service">
                         <div class="content-overlay"></div> <img class="content-image img-fluid" src="{{asset('/storage/uploads/images/services/'.$service->image)}}" style="height: 225px; width: 100%; display: block;">
                         <div class="content-details fadeIn-bottom">
-                            <p class="content-text">
+                            <p class="content-text" style="color:red;">
                             {!! $service->description !!}
                             </p>
                         </div>

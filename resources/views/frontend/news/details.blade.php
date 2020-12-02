@@ -1,11 +1,12 @@
 @extends('frontend.layouts.app')
 @section('content')
-<div class="jumbotron  text-white bg-dark" style="background-image: url(../img/news.jpg); background-size: cover;">
-  
-    <h2 class="display">News And Events</h2>
-    <p class=" my-3">Stay connected with us through the various events.
-      </p>
- 
+
+<div class="jumbotron  text-white bg-dark" style="background-image: url(img/contactus.png); background-size: cover;">
+    
+  <h2 class="display">News And Events</h2>
+  <p class=" my-3">Stay connected with us through the various events.
+    </p>
+
 </div>
       <br><br><br>
        <!--Details start Here-->

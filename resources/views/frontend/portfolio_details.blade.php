@@ -2,12 +2,15 @@
 @section('content')
 
 <div class="portfoliopage">
-   
-      <h2 class="display">Portfolio</h2>
-      <p class=" my-3">We believe that fundamental honesty is the
-        keystone of any successful business.
-        </p>
-    
+
+  <div class="jumbotron  text-white bg-dark" style="background-image: url(img/portfolio.jpg); background-size: cover;">
+      
+    <h2 class="display">Portfolio</h2>
+    <p class=" my-3">We believe that fundamental honesty is the
+      keystone of any successful business.
+      </p>
+  
+</div>
   </div>
       <br><br><br>
        <!--Details start Here-->
