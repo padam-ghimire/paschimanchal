@@ -10,7 +10,7 @@
   
   <div class="container">
     
-    <div class="row mb-2">
+    <div class="row">
 
     @foreach($cases as $case)
       <div class="col-md-6">
@@ -25,10 +25,10 @@
         <img src="{{asset('storage/uploads/images/case_study')}}/{{$case->image}}" alt="" width="200" style="min-height:200px;" class="img-fluid">          
       </div>
       </div>
-      
+      </div>
     @endforeach
 
       </div>
     </div>
-
+    <br><br>
 @endsection

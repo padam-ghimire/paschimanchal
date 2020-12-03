@@ -24,15 +24,15 @@
     <!--naivigation-->
     <nav id="navbar_top" class="navbar navbar-expand-lg navbar-custom">
 
-        <a class="navbar-brand" href="/"><img src="{{asset('/storage/frontend/img/'.$settings[0]->logo)}}" alt="" height="100px"></a>
+        <a class="navbar-brand" href="/"><img src="{{asset('/storage/frontend/img/'.$settings[0]->logo)}}" alt="" height="100px" width="180"></a>
 
         <div class="collapse navbar-collapse flex-column" id="navbarNavDropdown">
 
             <div class="header mr-auto">
-              <p class="d-md-none d-none d-lg-block ">
+              <p class="d-md-none d-none d-lg-block " style="font-size:14px;">
                 <br>
-                <span class="spanhead"></span> <i class="fas fa-phone-volume" style="color:darkcyan;"></i><span>&nbsp;&nbsp;<span style="color:#cc521d;">{{$settings[0]->phone}} &nbsp;&nbsp;&nbsp;&nbsp; </span >
-                <span><i class="fas fa-map-marker-alt" style="color:darkcyan;"></i><span>&nbsp;&nbsp;<span style="color:#cc521d;">{{$settings[0]->address}}</span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+                <span class="spanhead"></span> <i class="fas fa-phone-volume" style="color: #211942;"></i><span>&nbsp;&nbsp;<span style="color:#e36019;">{{$settings[0]->phone}} &nbsp;&nbsp;&nbsp;&nbsp; </span >
+                <span><i class="fas fa-map-marker-alt" style="color:#211942;;"></i><span>&nbsp;&nbsp;<span style="color:#e36019;">{{$settings[0]->address}}</span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
                 <span><a href="{{$settings[0]->facebook}}" target="blank"><i class="fab fa-facebook" style="font-size:25px;color:#7dbbfa;"></i></a>&nbsp;</span>
                 <span><a href="https://www.instagram.com/?hl=en" target="blank"><i class="fab fa-instagram" style="font-size:25px;color:maroon;"></i></a>&nbsp;</span>
                 <span><a href="{{$settings[0]->twitter}}" target="blank"><i class="fab fa-twitter-square" style="font-size:25px;color:blue;"></i></a>&nbsp;</span>
@@ -46,51 +46,51 @@
               <div style="width:100px;"></div>
               </li>
             <li class="nav-item active">
-              <a class="nav-link" href="{{route('home')}}">Home</a>
+              <a class="nav-link" href="{{route('home')}}" style="font-size:16px;">Home</a>
             </li>
             <li class="nav-item ">
               <div style="width:20px;"></div>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('about')}}">About Us</a>
+              <a class="nav-link" href="{{route('about')}}" style="font-size:16px;">About Us</a>
             </li>
             <li class="nav-item ">
               <div style="width:20px;"></div>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('portfolio')}}">Portfolio</a>
+              <a class="nav-link" href="{{route('portfolio')}}" style="font-size:16px;">Portfolio</a>
             </li>
             <li class="nav-item ">
               <div style="width:20px;"></div>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('services')}}">Services</a>
+              <a class="nav-link" href="{{route('services')}}" style="font-size:16px;">Services</a>
             </li>
             <li class="nav-item ">
               <div style="width:20px;"></div>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('news')}}">News & Events</a>
+              <a class="nav-link" href="{{route('news')}}" style="font-size:16px;">News & Events</a>
             </li>
             
             <li class="nav-item ">
               <div style="width:20px;"></div>
               </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{route('case_study')}}">Case Study</a>
+                <a class="nav-link" href="{{route('case_study')}}" style="font-size:16px;">Case Study</a>
               </li>
               <li class="nav-item ">
                 <div style="width:20px;"></div>
                 </li>
                 <li class="nav-item">
-                <a class="nav-link" href="/jobs">Career</a>
+                <a class="nav-link" href="/jobs" style="font-size:16px;">Career</a>
               </li>
               <li class="nav-item ">
                 <div style="width:20px;"></div>
                 </li>
                 
             <li class="nav-item">
-              <a class="nav-link" href="{{route('contact')}}">Contact Us</a>
+              <a class="nav-link" href="{{route('contact')}}" style="font-size:16px;">Contact Us</a>
             </li>
            
           </ul>
@@ -124,7 +124,8 @@
                   <br><br>
                       <div class="contactfooter">
                           <p style="color:#878787;">{{$settings[0]->address}}</p>
-                    <a href=""><p style="color: #878787;"><i class="fas fa-phone-volume"></i> &NonBreakingSpace;<span>{{$settings[0]->phone}}<span> &NonBreakingSpace;<i class="fas fa-envelope"></i> &NonBreakingSpace;<span>{{$settings[0]->email}}</span></p></a>
+                    <a href=""><p style="color: #878787;"><i class="fas fa-phone-volume"></i> &NonBreakingSpace;<span>{{$settings[0]->phone}}<span> &NonBreakingSpace;,</i> &NonBreakingSpace;<span>{{$settings[0]->phone}}</span></p></a>
+                    <a href=""><p style="color: #878787;"><i class="fas fa-envelope"></i>&NonBreakingSpace;<span>{{$settings[0]->email}}</span></p></a>
                       </div>
                       
                           
@@ -229,9 +230,18 @@
           </div>
           <!-- End Col -->
       </div>
+     
       <!-- End Widget Row -->
   </div>
-  <!-- End Contact Container -->     
+  <!-- End Contact Container -->    
+  <div class="">
+    <div class="row">
+      <div class="col-lg-12 footfoot">
+        <hr>
+        <p style="text-align:center; color: #878787;">Copyright <i class="fas fa-copyright"></i> Paschimanchal Solutions . Developed By <a href="https://www.icreationtech.com"> <span style="color:white;"> icreation</span></a></p>
+      </div>
+    </div>
+  </div> 
 </footer>
 
     <script type="text/javascript" src="{{asset('frontend')}}/bootstrap/js/jquery.js"></script>

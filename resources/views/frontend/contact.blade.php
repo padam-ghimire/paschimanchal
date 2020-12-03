@@ -126,8 +126,6 @@
           <p><i class="fas fa-phone-volume"></i><span>&NonBreakingSpace; {{$settings[0]->phone}}/</span></p>
 
           <p><a href=""><i class="fas fa-envelope"></i></i><span>&NonBreakingSpace;{{$settings[0]->email}}</span></a></p>
-     
-          <p><a href="http://www.paschimanchl.net/"><i class="fab fa-internet-explorer"></i></i><span>&NonBreakingSpace; http://www.paschimanchl.net/</span></p></a>
           
         </div>
         

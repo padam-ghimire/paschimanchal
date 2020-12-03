@@ -27,6 +27,7 @@
         <div class="col-auto d-none d-lg-block">
        <img src="{{asset('storage/uploads/images/news')}}/{{$news->image}}" alt="" width="200" style="min-height:200px;" class="img-fluid">         
     </div>
+    
       </div>
     </div><!--col ends-->
     @endforeach
