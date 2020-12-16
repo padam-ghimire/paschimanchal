@@ -64,6 +64,8 @@ class MainController extends Controller
 
     public function news(){
         $newses= News::all();
+
+      
         return view('frontend.news.index',compact('newses'));
     }
 
@@ -93,7 +95,10 @@ class MainController extends Controller
 
     public function showNews($id){
 
-        $news=News::find($id);
+        $news=News::find($id)->get();;
+
+
+       
         return view('frontend.news.details',compact('news'));
 
     }

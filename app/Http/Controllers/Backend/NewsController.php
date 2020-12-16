@@ -59,6 +59,8 @@ class NewsController extends BaseController
      */
     public function store(NewsRequest $request)
     {
+
+        // return $request;
          // return $request->file('image');
          try {
             
