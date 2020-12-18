@@ -14,6 +14,7 @@ use App\Models\Service;
 use App\Models\CaseStudy;
 use App\Models\BoardMember;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use App\Repository\ServicesRepository;
 use App\Models\Configurations\District;
@@ -95,9 +96,7 @@ class MainController extends Controller
 
     public function showNews($id){
 
-        $news=News::find($id)->get();;
-
-
+        $news = DB::table('news')->where('id',$id)->get();
        
         return view('frontend.news.details',compact('news'));
 
