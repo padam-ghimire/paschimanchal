@@ -96,7 +96,7 @@ class MainController extends Controller
 
     public function showNews($id){
 
-        $news = DB::table('news')->where('id',$id)->get();
+        $news = DB::table('news')->where('id',$id)->first();
        
         return view('frontend.news.details',compact('news'));
 
